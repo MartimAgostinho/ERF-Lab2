@@ -1,0 +1,4 @@
+Report/main.*
+!Report/main.tex
+
+Schematics/*.asc
