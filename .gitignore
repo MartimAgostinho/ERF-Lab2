@@ -1,3 +1,5 @@
 Report/main.*
 !Report/main.tex
 
+Ltspice/*.net
+Ltspice/*.log
