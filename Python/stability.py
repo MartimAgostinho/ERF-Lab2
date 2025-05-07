@@ -5,15 +5,20 @@ import skrf as rf
 plt.rcParams['figure.figsize'] = [8, 8]
 
 # Load the S-parameter file
-bjt = rf.Network('1to10G.s2p')  # Ensure filename matches
+bjt = rf.Network('1to10G.s2p', )
 
-# Stability calculations (precompute for all frequencies)
+# Define a function to calculate the square of the absolute value
 
 
 def sqabs(x): return np.square(np.absolute(x))
 
 
+# delta is the determinant of the S-parameter matrix
 delta = bjt.s11.s * bjt.s22.s - bjt.s12.s * bjt.s21.s
+
+# Source and load reflection coefficients
+# rs and rl are the source and load reflection coefficients
+# cs and cl are the source and load circle centers
 rs = np.abs((bjt.s12.s * bjt.s21.s) / (sqabs(bjt.s11.s) - sqabs(delta)))
 cs = np.conj(bjt.s11.s - delta * np.conj(bjt.s22.s)) / \
     (sqabs(bjt.s11.s) - sqabs(delta))
@@ -39,46 +44,82 @@ def calc_circle(c, r):
     return c + r * np.exp(1.0j*theta)
 
 
-# Loop over each frequency and plot individually
-# for idx in range(len(bjt.f)):
-#     plt.figure()
+# Filter for 4 GHz
+freq_idx = np.where(np.isclose(bjt.f, 4e9, atol=1e6))[
+    0][0]
+freq_point = bjt[freq_idx]
 
-#     # Plot S11 and S22 for the current frequency
-#     freq_point = bjt[idx]
-#     freq_point.plot_s_smith(m=0, n=0, label='S11',
-#                             marker='o', color='green')  # S11
-#     freq_point.plot_s_smith(m=1, n=1, label='S22',
-#                             marker='o', color='purple')  # S22
+# Generate stability circles for 4 GHz
+source_circle = calc_circle(cs[freq_idx][0, 0], rs[freq_idx][0, 0])
+load_circle = calc_circle(cl[freq_idx][0, 0], rl[freq_idx][0, 0])
 
-#     # Generate stability circles for this frequency
-#     source_circle = calc_circle(cs[idx][0, 0], rs[idx][0, 0])
-#     load_circle = calc_circle(cl[idx][0, 0], rl[idx][0, 0])
+# Plot S11 and S22 for 4 GHz
+plt.figure()
+s11 = freq_point.s11.s[0, 0]  # Extrair o valor numérico de S11
+s22 = freq_point.s22.s[0, 0]  # Extrair o valor numérico de S22
+print('S11:', s11)
+print('S22:', s22)
+print('|s11|: ', np.abs(s11))
+print('|s22|: ', np.abs(s22))
 
-#     # Plot source stability circle
-#     n_source = rf.Network(frequency=rf.Frequency(
-#         bjt.f[idx], unit='Hz'), s=source_circle)
-#     n_source.plot_s_smith(
-#         color='red', label='Source Stability Circle', marker='')
+# Adicionar os valores numéricos ao gráfico
+freq_point.plot_s_smith(
+    m=0, n=0, label=f'S11 = {s11}', marker='o', color='green')  # S11
+freq_point.plot_s_smith(
+    m=1, n=1, label=f'S22 = {s22}', marker='o', color='purple')  # S22
 
-#     # Plot load stability circle
-#     n_load = rf.Network(frequency=rf.Frequency(
-#         bjt.f[idx], unit='Hz'), s=load_circle)
-#     n_load.plot_s_smith(color='blue', label='Load Stability Circle', marker='')
+# Calcular B1, B2, C1 e C2
+delta4GHz = delta[freq_idx][0, 0]
+print('delta4GHz:', delta4GHz)
+B1 = 1 + sqabs(s11) - sqabs(s22) - sqabs(delta4GHz)
+print('B1:', B1)
+B2 = 1 + sqabs(s22) - sqabs(s11) - sqabs(delta4GHz)
+print('B2:', B2)
+C1 = s11 - (delta4GHz * np.conj(s22))
+print('C1:', C1)
+C2 = s22 - (delta4GHz * np.conj(s11))
+print('C2:', C2)
 
-#     plt.title(f'Frequency: {bjt.f[idx]/1e9} GHz')
-#     plt.legend()
-#     plt.tight_layout()
-#     plt.show()
+# Calcular ros (ρs) e rol (ρL)
+ros = (B1 - np.sqrt(np.square(B1) - 4 * sqabs(C1))) / (2 * C1)
+rol = (B2 - np.sqrt(np.square(B2) - 4 * sqabs(C2))) / (2 * C2)
 
+# Exibir os resultados para 4 GHz
+print("Frequency (GHz):", bjt.f[freq_idx] / 1e9)
+print("ros (ρs):", ros)
+print("rol (ρL):", rol)
+
+zs = (1 + ros) / (1 - ros)
+print("zs:", zs)
+zl = (1 + rol) / (1 - rol)
+print("zl:", zl)
+
+# Plot source stability circle
+n_source = rf.Network(frequency=rf.Frequency(
+    bjt.f[freq_idx], unit='Hz'), s=source_circle)
+n_source.plot_s_smith(color='red', label='Source Stability Circle', marker='')
+
+# Plot load stability circle
+n_load = rf.Network(frequency=rf.Frequency(
+    bjt.f[freq_idx], unit='Hz'), s=load_circle)
+n_load.plot_s_smith(color='blue', label='Load Stability Circle', marker='')
+
+rf.plotting.plot_smith(zl, marker='o', color='blue',
+                       label=f'Zl = {zl}')  # Plot Zl
+rf.plotting.plot_smith(zs, marker='o', color='red',
+                       label=f'Zs = {zs}')  # Plot Z
+
+plt.title(f'Frequency: {bjt.f[freq_idx]/1e9} GHz')
+plt.legend()
+plt.tight_layout()
+plt.show()
 
 k = np.squeeze(k)  # Remove any singleton dimensions
 delta = np.squeeze(delta)  # Remove any singleton dimensions
 mu = np.squeeze(mu)  # Remove any singleton dimensions
 MAG = np.squeeze(MAG)  # Remove any singleton dimensions
 
-# print mag at 4 Ghz
-print(bjt.f)
-print((np.isclose(bjt.f, 4e9, atol=1.e-3)))
+# Print MAG at 4 Ghz
 val = MAG[np.where(np.isclose(bjt.f, 4e9, atol=1e6))]
 print('MAG at 4 GHz:', sum(val)/len(val))
 

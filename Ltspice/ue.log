@@ -1,6 +1,6 @@
 LTspice 24.1.5 for Windows
 Circuit: C:\Users\sofia\OneDrive - FCT NOVA\MIEEC\Mestrado\ERf\ERF-Lab2\Ltspice\ue.net
-Start Time: Wed Apr 16 14:11:43 2025
+Start Time: Wed Apr 23 13:22:53 2025
 solver = Normal
 Maximum thread count: 16
 tnom = 27
@@ -9,7 +9,7 @@ method = trap
 WARNING: Node x1:n006 is floating.
 
 Direct Newton iteration for .op point succeeded.
-Total elapsed time: 0.233 seconds.
+Total elapsed time: 0.431 seconds.
 
 Files loaded:
 C:\Users\sofia\OneDrive - FCT NOVA\MIEEC\Mestrado\ERf\ERF-Lab2\Ltspice\ue.net
