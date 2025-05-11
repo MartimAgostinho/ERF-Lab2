@@ -83,8 +83,25 @@ Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
 
 \subsection{S-parameters with packaging effects}
 
+With the biasing circuit designed, the next step was to simulate the S-parameters of the transistor in LTSpice.  The S-parameters were taken for a frequency range of $1\,\si{\giga\hertz}$ to $10\,\si{\giga\hertz}$, Figure \ref{fig:withoutmathing} shows the S-parameters of the transistor without any matching network.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/without-matching.png}
+    \caption{S-parameters of the transistor without matching network}
+    \label{fig:withoutmathing}
+\end{figure}
+
 \subsection{Transistor validation for the given bias point}
 
+% The transistor standstill operating point was simulated in LTSpice, and the results are shown in Figure \ref{fig:op-bias}. 
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{Images/OpBias.png}
+%     \caption{Transistor operating point}
+%     \label{fig:op-bias}
+% \end{figure}
 \subsection{Stability}
 
 \subsection{Input and output matching networks for maximum gain}
@@ -139,6 +156,35 @@ The resulting circuit is shown in Figure \ref{fig:MatchingCircuit}, where the in
 \end{figure}
 
 \subsubsection{Matching lines and stubs}
-The matching networks were also designed using transmission lines and stubs, this type of adaptation allows grater frequencies (more than 1 \si{\giga \hertz}) in real conditions. The input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of transmission lines and stubs. The values of the components are also calculated using the equations for impedance transformation.
+The matching networks were also designed using transmission lines and stubs, this type of adaptation allows grater frequencies (more than 1 \si{\giga \hertz}) in real conditions. The input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of transmission lines and stubs. The values of the components are also calculated using the equations for impedance transformation to validate the results.
 
-\subsection{Gain and Noise Factor}
+The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-line-matching} and \ref{fig:zl-line-matching}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/zs-LS-matching.png}
+    \caption{Smith chart for input matching with lines and stubs}
+    \label{fig:zs-line-matching}
+\end{figure}
+
+The adaptation mesh for the input was done with an open circuit shunt stub and a series line. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/zl-LS-matching.png}
+    \caption{Matching circuit for input with lines and stubs}
+    \label{fig:zl-line-matching}
+\end{figure}
+
+The adaptation mesh for the output is done with a series line and an open circuit shunt stub.
+
+The final circuit is shown in Figure \ref{fig:MatchingCircuit-line}, where the input and output matching networks are designed using a combination of transmission lines and stubs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/LS_matching-circuit.png}
+    \caption{Matching circuit for input and output with values}
+    \label{fig:MatchingCircuit-line}
+\end{figure}
+
+%\subsection{Gain and Noise Factor}
