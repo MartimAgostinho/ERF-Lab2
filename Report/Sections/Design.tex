@@ -87,6 +87,57 @@ Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
 
 \subsection{Stability}
 
+
+Ensuring that the LNA remains stable is critical for reliable operation. The network is unconditionally stable for a frequency if for any source impedance value, $|\rho_{in}|<1$  and for the load impedance $|\rho_{out}|<1$.
+The stability circles can be used to determine regions for $\rho_{in}$ and $\rho_{out}$ where the amplifier circuit will be conditionally stable, but simpler tests can be used to determine unconditional stability. 
+
+
+Defining $K$ as:
+
+\begin{equation}
+    K = \frac{1-|S_{11}|^2-|S_{22}|^2+|\Delta|^2}{2|S_{12}\cdot S_{21}|}
+\end{equation}
+
+If:
+\begin{itemize}
+    \item $K>1$ and $|\Delta|<1\rightarrow$ unconditionally stable
+    \item $K>1$ and $|\Delta| > 1$ or  $K<1 \rightarrow$ potentially unstable or always unstable
+\end{itemize}
+
+Another criteria is the $\mu$ factor,
+
+Defining $\mu$ as:
+$$\mu = \frac{1-|S_{11}|^2}{|S_{22}-\Delta S_{11}^*| + |S_{12}\cdot S_{21}|}$$
+
+if $\mu > 1\rightarrow$ unconditionally stable
+In addition, it can be said that larger values of $\mu$ imply greater stability.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics*[scale = 0.5]{Images/KFactor.png}
+    \caption{Stability tests}
+    \label{fig:StabilityTest}
+\end{figure}
+
+Figure \ref{fig:StabilityTest}, shows that the LNA is stable for frequencies above $\SI{3.1}{\giga\hertz}$ and above $\SI{10}{\giga\hertz}$ loses stability again.
+
+At this stage another important figure is the Maximum Available Gain, $MAG$, which for the bilateral case can be expressed as the equation \ref{eq:MAG}.
+
+\begin{equation}
+    MAG = \left | \frac{S_{21}}{S_{12}} \right |\cdot \left[ K \pm \sqrt{K^2-1} \right]
+    \label{eq:MAG}
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics*[scale = 0.5]{Images/MAG.png}
+    \caption{Maximum Available Gain }
+    \label{fig:MAG}
+\end{figure}
+
+Now having the full picture of the LNA characteristics, an operating frequency can be decided. It is a compromise between stability and gain. The frequency chosen was $\SI{4}{\giga\hertz}$.
+
+
 \subsection{Input and output matching networks for maximum gain}
 
 The adaptation for maximum gain is done using the line impedance transformation method. The input and output matching networks are designed to transform the input and output impedances of the transistor to the desired values, which are $50\,\si{\ohm}$ in this case. In the Smith chat, the matching is done with inductors and capacitors and lines and stubs.
