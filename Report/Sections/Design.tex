@@ -1,0 +1,92 @@
+\section{Design of the LNA}
+
+\subsection{Transistor Bias Network}
+
+The DC bias point of a transistor directly influences its small-signal S-parameters, and hence the gain, noise figure and stability of the LNA. This makes this step crucial.
+Figure \ref{fig:DCBiasNPN} shows the biasing circuit and its Thévenin equivalent used to simplify analysis.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics*[scale = 0.3]{Images/DCBiasNPN.png}
+        \caption{Transistor DC biasing circuit}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics*[scale = 0.3]{Images/VthBiasCircuit.png}
+        \caption{Bias circuit equivalent circuit}
+        \label{fig:DCBiasTh}
+    \end{subfigure}
+    \label{fig:DCBiasNPN}
+\end{figure}
+
+As shown in Figure \ref{fig:DCBiasTh} the Thévenin equivalent is given by the equations \ref{eq:biasThev}, replacing the $R_1$, $R_2$ voltage divider.
+
+\begin{equation}
+    \begin{split}
+        R_{TH} &= R_1//R_2\\
+        V_{TH} &= V_{cc}\frac{R_2}{R_1+R_2}
+    \end{split}
+    \label{eq:biasThev}
+\end{equation}
+
+Using Kirchhoff voltage law, the equations \ref{eq:biasKVL} are derived, the first starts at $V_{TH}$ goes through $R_{TH}$, $V_{BE}$ and $R_4$. The second goes from $V_{CC}$ through $R_3$, $V_{CE}$ and $R_4$. 
+
+\begin{equation}
+    \begin{cases}        
+        0 = V_{TH} -I_b\cdot R_{TH} - V_{BE}-I_E\cdot R_4  \\
+        0 = V_{CC} - R_3\cdot I_C - V_{CE} - I_E \cdot R_4\\
+    \end{cases}
+    \label{eq:biasKVL}
+\end{equation}
+
+Solving the system of equations, assuming fixed values for $R_2$ and $R_4$, originates the equations \ref{eq:biasr1r3}.
+
+\begin{equation}
+    \begin{split}
+        R_1 &= \frac{R_{2} \left(- I_{C} R_{4} \beta - I_{C} R_{4} - V_{BE} \beta + V_ {CC} \beta\right)}{I_{C} R_{2} + I_{C} R_{4} \beta + I_{C} R_{4} + V_{BE} \beta}\\
+        R_3 &= \frac{- I_{C} R_{4} \beta - I_{C} R_{4} + V_{CC} \beta - V_{CE} \beta}{I_{C} \beta}
+    \end{split}
+    \label{eq:biasr1r3}
+\end{equation}
+
+The Table \ref{tab:BiasParam}, shows the provided values for the biasing circuit and the fixed values for $R_2$ and $R_4$.
+
+\begin{table}[h]
+    \centering
+    \caption{Transistor biasing parameters}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $R_2$     & $1\,\si{\kilo\ohm}$ \\
+        \midrule
+        $R_4$     & $100\,\si{\ohm}$\\
+        \midrule
+        $\beta$   & $72.534$ \\
+        \midrule
+        $I_C$     & $9\,\si{\milli\ampere}$ \\
+        \midrule
+        $V_{CC}$  & $10\,\si{\volt}$ \\
+        \midrule
+        $V_{BE}$  & $1\,\si{\volt}$ \\
+        \midrule
+        $V_{CE}$  & $\SI{5}{\volt}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:BiasParam}
+\end{table}
+
+Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
+
+\textcolor{red}{FALTA SIM E JUSTIFICAR A SIM}
+
+\subsection{S-parameters with packaging effects}
+
+\subsection{Transistor validation for the given bias point}
+
+\subsection{Stability}
+
+\subsection{Input and output matching networks}
+
+\subsection{Gain and Noise Factor}
