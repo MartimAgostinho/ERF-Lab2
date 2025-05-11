@@ -87,6 +87,57 @@ Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
 
 \subsection{Stability}
 
-\subsection{Input and output matching networks}
+\subsection{Input and output matching networks for maximum gain}
+
+The adaptation for maximum gain is done using the line impedance transformation method. The input and output matching networks are designed to transform the input and output impedances of the transistor to the desired values, which are $50\,\si{\ohm}$ in this case. In the Smith chat, the matching is done with inductors and capacitors and lines and stubs.
+
+\subsubsection{Matching with lumped elements}
+The matching networks are designed using the Smith chart, which allows for the visualization of the impedance transformation. The input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors. The values of the components are also calculated using the equations for impedance transformation.
+
+The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-LC-matching} and \ref{fig:zl-LC-matching}, where the input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/zs-LC-matching.png}
+    \caption{Smith chart for input matching with lumped elements}
+    \label{fig:zs-LC-matching}
+\end{figure}
+
+The adaptation mesh for the input was done with a shunt inductor and a series capacitor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-input}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/Input-matching-circuit.png}
+    \caption{Matching circuit for input}
+    \label{fig:MatchingCircuit-input}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/zl-LC-matching.png}
+    \caption{Smith chart for output matching with lumped elements}
+    \label{fig:zl-LC-matching}
+\end{figure}
+
+The adaptation mesh for the output is done with a series capacitor and a shunt inductor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-output}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/Ouput-matching-circuit.png}
+    \caption{Matching circuit for output}
+    \label{fig:MatchingCircuit-output} 
+\end{figure}
+
+The resulting circuit is shown in Figure \ref{fig:MatchingCircuit}, where the input and output matching networks are designed using a combination of inductors and capacitors.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/LC_matching-circuit.png}
+    \caption{Matching circuit for input and output with values}
+    \label{fig:MatchingCircuit}
+\end{figure}
+
+\subsubsection{Matching lines and stubs}
+The matching networks were also designed using transmission lines and stubs, this type of adaptation allows grater frequencies (more than 1 \si{\giga \hertz}) in real conditions. The input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of transmission lines and stubs. The values of the components are also calculated using the equations for impedance transformation.
 
 \subsection{Gain and Noise Factor}
