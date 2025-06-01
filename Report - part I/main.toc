@@ -1,0 +1,14 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Design of the LNA}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Transistor Bias Network}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}S-parameters with packaging effects}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Stability}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Input and output matching networks for Maximum Gain}{8}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Matching with lumped elements}{10}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Matching lines and stubs}{13}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Simulation}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Validation of the LNA design}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Input and output matching networks design simulation}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Noise}{20}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Conclusion}{22}{section.4}%

@@ -56,7 +56,7 @@ The Table \ref{tab:BiasParam}, shows the provided values for the biasing circuit
 \begin{table}[h]
     \centering
     \caption{Transistor biasing parameters}
-    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
         \toprule
         \textbf{Parameter} & \textbf{Value} \\
         \midrule
@@ -82,56 +82,64 @@ Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
 
 \subsection{S-parameters with packaging effects}
 
+The diagram of the LNA is shown in Figure \ref{fig:LNA-diagram}, where the LNA has arbitrary input and output impedances different from $50\,\si{\ohm}$ and reflection coefficients.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/LNA-diagram-no-match.png}
+    \caption{LNA diagram with reflection coefficients and no matching networks.}
+    \label{fig:LNA-diagram}
+\end{figure}
+
 With the biasing circuit designed, the next step was to simulate the S-parameters of the transistor in LTSpice.  The S-parameters were taken for a frequency range of $1\,\si{\giga\hertz}$ to $10\,\si{\giga\hertz}$, Figure \ref{fig:withoutmathing} shows the S-parameters of the transistor without any matching network.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/without-matching.png}
-    \caption{S-parameters of the transistor without matching network}
+    \includegraphics[width=0.6\textwidth]{Images/without-matching.png}
+    \caption{S-parameters of the transistor, for the range of frequencies, without matching network.}
     \label{fig:withoutmathing}
 \end{figure}
 
-%\subsection{Transistor validation for the given bias point}
 
-% The transistor standstill operating point was simulated in LTSpice, and the results are shown in Figure \ref{fig:op-bias}. 
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{Images/OpBias.png}
-%     \caption{Transistor operating point}
-%     \label{fig:op-bias}
-% \end{figure}
 \subsection{Stability}
 
 
 Ensuring that the LNA remains stable is critical for reliable operation. The network is unconditionally stable for a frequency if for any source impedance value, $|\rho_{in}|<1$  and for the load impedance $|\rho_{out}|<1$.
-The stability circles can be used to determine regions for $\rho_{in}$ and $\rho_{out}$ where the amplifier circuit will be conditionally stable, but simpler tests can be used to determine unconditional stability. 
+Below, the stability analysis is performed using the S-parameters obtained in the previous step to calculate the stability factors, ins this case, the $K$ and $\Delta$ factors and the $\mu$ factor.
 
+Defining $\Delta$ as:
 
-Defining $K$ as:
+\begin{equation}
+    \Delta = S_{11}\cdot S_{22} - S_{12}\cdot S_{21}
+    \label{eq:Delta}
+\end{equation}
+
+Where $S_{11}$, $S_{22}$, $S_{12}$ and $S_{21}$ are the S-parameters of the LNA. 
+
+And defining $K$ as:
 
 \begin{equation}
     K = \frac{1-|S_{11}|^2-|S_{22}|^2+|\Delta|^2}{2|S_{12}\cdot S_{21}|}
 \end{equation}
 
-If:
+The stability conditions can be summarized as follows:
+
 \begin{itemize}
     \item $K>1$ and $|\Delta|<1\rightarrow$ unconditionally stable
     \item $K>1$ and $|\Delta| > 1$ or  $K<1 \rightarrow$ potentially unstable or always unstable
 \end{itemize}
 
-Another criteria is the $\mu$ factor,
+Another criteria is the $\mu$ factor, defining $\mu$ as:
 
-Defining $\mu$ as:
 $$\mu = \frac{1-|S_{11}|^2}{|S_{22}-\Delta S_{11}^*| + |S_{12}\cdot S_{21}|}$$
 
-if $\mu > 1\rightarrow$ unconditionally stable
+If $\mu > 1\rightarrow$ unconditionally stable
 In addition, it can be said that larger values of $\mu$ imply greater stability.
 
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale = 0.5]{Images/KFactor.png}
-    \caption{Stability tests}
+    \includegraphics[width=0.6\textwidth]{Images/KFactor.png}
+    \caption{Stability factors $K$, $\Delta$ and $\mu$ for the range of frequencies.}
     \label{fig:StabilityTest}
 \end{figure}
 
@@ -140,29 +148,181 @@ Figure \ref{fig:StabilityTest}, shows that the LNA is stable for frequencies abo
 At this stage another important figure is the Maximum Available Gain, $MAG$, which for the bilateral case can be expressed as the equation \ref{eq:MAG}.
 
 \begin{equation}
-    MAG = \left | \frac{S_{21}}{S_{12}} \right |\cdot \left[ K \pm \sqrt{K^2-1} \right]
+    MAG = \left | \frac{S_{21}}{S_{12}} \right |\cdot \left[ K - \sqrt{K^2-1} \right]
     \label{eq:MAG}
 \end{equation}
 
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale = 0.5]{Images/MAG.png}
-    \caption{Maximum Available Gain }
+    \includegraphics[width=0.6\textwidth]{Images/MAG.png}
+    \caption{Maximum Available Gain for the range of frequencies.}  
     \label{fig:MAG}
 \end{figure}
 
-Now having the full picture of the LNA characteristics, an operating frequency can be decided. It is a compromise between stability and gain. The frequency chosen was $\SI{4}{\giga\hertz}$.
+Now having the full picture of the LNA characteristics, an operating frequency can be decided. 
+The frequency chosen was the one that maximizes the gain while maintaining stability. In this case, the chosen was $\SI{4}{\giga\hertz}$, where the $MAG$ is $26,13$ and the stability factors are $K=1,05$, $\Delta=0,35$ and $\mu=1,06$, the summary of the stability parameters is shown in Table \ref{tab:StabilityParam}.
+
+\begin{table}[h]
+    \centering
+    \caption{Stability parameters for the chosen frequency.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Chosen Frequency     & $4\,\si{\giga\hertz}$ \\
+        \midrule
+        $|\Delta|$     & $0,35$\\
+        \midrule
+        $k$   & $1,05$ \\
+        \midrule
+        $\mu$     & $1,06$ \\
+        \midrule
+        $MAG$  & $26,13$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:StabilityParam}
+\end{table}
+
+The stability circles in the Smith Chart for the input and output are shown in Figure \ref{fig:StabilityCircles}, where is possible to see  that at $4\si{\giga\hertz}$ the LNA is stable for all the source and load impedances.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/stability-circles.png}
+    \caption{Stability circles for the input and output of the LNA.}
+    \label{fig:StabilityCircles}
+\end{figure}
+
+\subsection{Input and output matching networks for Maximum Gain}
+
+The adaptation for maximum gain is done using the line impedance transformation method. The input and output matching networks are designed to transform the input and output impedances of the transistor to the desired values, which are $50\,\si{\ohm}$ in this case. In the Smith Chart, the matching is done with inductors and capacitors or lines and stubs.
+
+In Figure \ref{fig:LNA-diagram} the diagram of the LNA is shown, where is possible to see the reflection coefficients, the input and output matching networks, the source and load impedances $Z_0$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/LNA-diagram.png}
+    \caption{LNA diagram with matching networks and reflection coefficients.}
+    \label{fig:LNA-diagram}
+\end{figure}
+
+Observing the diagram, the input and output matching networks are designed to transform the input and output impedances of the transistor to $50\,\si{\ohm}$, corresponding to the source and load impedances $Z_0$.
+
+The maximum power transfer from the input matching network to the transistor will occur when:
+
+\begin{equation}
+    \Gamma_{in} = \Gamma_{s}^*
+    \label{eq:GammaS=GammaL}
+\end{equation}
+
+And the maximum power transfer from the transistor to the output matching network will occur when:
+\begin{equation}
+    \Gamma_{out} = \Gamma_{l}^*
+    \label{eq:GammaL=GammaS}
+\end{equation}
+where $\Gamma_{in}$ and $\Gamma_{out}$ are the reflection coefficients at the input and output of the transistor, respectively, and $\Gamma_{s}$ and $\Gamma_{l}$ are the reflection coefficients at the source and load impedances, respectively. Using the equations obtain in \cite{Pozar}, the expression that result in the reflection coefficients at the input and output of the transistor are:
+
+\begin{equation}
+    B_1 = 1 + |S_{11}^2| - |S_{22}|^2 - |\Delta|^2 
+    \label{eq:B1}
+\end{equation}
+\begin{equation}
+    B_2 = 1 + |S_{22}^2| - |S_{11}|^2 - |\Delta|^2
+    \label{eq:B2}
+\end{equation}
+\begin{equation}
+    C_1 = S_{11} - \Delta S_{22}^*
+    \label{eq:C1}
+\end{equation}
+\begin{equation}
+    C_2 = S_{22} - \Delta S_{11}^* 
+    \label{eq:C2}
+\end{equation}
+
+Finally, the reflection coefficients at the source and load of the transistor are given by:
+
+\begin{equation}
+    \Gamma_{S} = \frac{B_1 \pm \sqrt{B-1^2-4|C_1|^2}}{2C_1}
+    \label{eq:GammaS}
+\end{equation}
+
+\begin{equation}
+    \Gamma_{L} = \frac{B_2 \pm \sqrt{B-2^2-4|C_2|^2}}{2C_2}
+    \label{eq:GammaL}
+\end{equation}
+
+In Table \ref{tab:ReflectionCoefficients} the reflection coefficients at the input and output of the transistor are shown, where the values are calculated using the S-parameters obtained in the previous step.
+\begin{table}[H]
+    \centering
+    \caption{Reflection coefficients at the input and output of the transistor.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $\Gamma_{S}$     & $-0.61339711-0.4649262j$ \\
+        \midrule
+        $\Gamma_{L}$     & $0.29177619+0.6148401j$\\
+        \midrule
+        $B_{1}$     & $1.03559444$\\
+        \midrule
+        $B_{2}$     & $0.72244362$\\
+        \midrule
+        $C_{1}$     & $-0.39891088+0.30235572j$\\
+        \midrule
+        $C_{2}$     & $0.144066-0.30358047j$\\
+        \midrule
+        $S_{11}$     & $-0.33990673+0.27537675j$\\
+        \midrule
+        $S_{12}$     & $0.06042986-0.17647029j$\\
+        \midrule
+        $S_{21}$     & $0.09296393+0.05839295j$\\
+        \midrule
+        $S_{22}$     & $2.52965222+2.95848991j$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:ReflectionCoefficients}
+\end{table}
+
+With the values of the reflection coefficients at the source and load, the normalized impedances at the source and load can be calculated using the equations \ref{eq:Zs} and \ref{eq:Zl}.
+
+\begin{equation}
+    z_{S} = \frac{1+\Gamma_{S}}{1-\Gamma_{S}}
+    \label{eq:Zs}
+\end{equation}
+\begin{equation}
+    z_{L} = \frac{1+\Gamma_{L}}{1-\Gamma_{L}}
+    \label{eq:Zl}
+\end{equation}
+
+Where $Z_0$ is the desired impedance, in this case $50\,\si{\ohm}$.
+The resulting normalized impedances at the source and load are shown in Table \ref{tab:Impedances}, where the values are calculated using the reflection coefficients obtained in the previous step.
+
+\begin{table}[H]
+    \centering
+    \caption{Impedances at the source and load of the transistor.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $z_{S}$     & $0.14457529-0.32982769j$ \\
+        \midrule
+        $z_{L}$     & $0.6103145+1.39798452j$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:Impedances}
+\end{table}
 
 
-\subsection{Input and output matching networks for maximum gain}
 
-The adaptation for maximum gain is done using the line impedance transformation method. The input and output matching networks are designed to transform the input and output impedances of the transistor to the desired values, which are $50\,\si{\ohm}$ in this case. In the Smith chat, the matching is done with inductors and capacitors and lines and stubs.
 
 \subsubsection{Matching with lumped elements}
 
-The matching networks are designed using the Smith chart, which allows for the visualization of the impedance transformation. The input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors. The values of the components are also calculated using the equations for impedance transformation.
+The matching networks were first designed using the Smith chart, which allows for the visualization of the impedance transformation. A second analysis was done with an analytic approach using a Python script in order to have more accurate results. The input and output impedances of the LNA are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors. The values of the components are also calculated using the equations for impedance transformation. 
 
-The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-LC-matching} and \ref{fig:zl-LC-matching}, where the input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors.
+\vspace{0.4cm}
+\textbf{Results with the Smith Chart:}
+\vspace{0.4cm}
+
+The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-LC-matching} and \ref{fig:zl-LC-matching}, where the input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors, in this case a L-section matching network.
 
 \begin{figure}[H]
     \centering
@@ -196,6 +356,15 @@ The adaptation mesh for the output is done with a series capacitor and a shunt i
     \label{fig:MatchingCircuit-output} 
 \end{figure}
 
+\vspace{0.4cm}
+\textbf{Results with analytic approach:}
+\vspace{0.4cm}
+
+The matching using the analytic approach was done using a Python script that calculates the values of the components based on the input and output impedances of the transistor. The input and output impedances of the transistor were transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors, in this case a L-section matching network.
+The values of the components were also calculated using the equations for impedance transformation to validate the results. The input and output matching networks are shown in Figures \ref{fig:MatchingCircuit}.
+
+
+
 The resulting circuit is shown in Figure \ref{fig:MatchingCircuit}, where the input and output matching networks are designed using a combination of inductors and capacitors.
 
 \begin{figure}[H]
@@ -210,21 +379,21 @@ The matching networks were also designed using transmission lines and stubs, thi
 
 The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-line-matching} and \ref{fig:zl-line-matching}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Images/zs-LS-matching.png}
-    \caption{Smith chart for input matching with lines and stubs}
-    \label{fig:zs-line-matching}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{Images/zs-LS-matching.png}
+%     \caption{Smith chart for input matching with lines and stubs}
+%     \label{fig:zs-line-matching}
+% \end{figure}
 
 The adaptation mesh for the input was done with an open circuit shunt stub and a series line. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Images/zl-LS-matching.png}
-    \caption{Matching circuit for input with lines and stubs}
-    \label{fig:zl-line-matching}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{Images/zl-LS-matching.png}
+%     \caption{Matching circuit for input with lines and stubs}
+%     \label{fig:zl-line-matching}
+% \end{figure}
 
 The adaptation mesh for the output is done with a series line and an open circuit shunt stub.
 
