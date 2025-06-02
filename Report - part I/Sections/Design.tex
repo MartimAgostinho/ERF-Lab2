@@ -187,7 +187,7 @@ The stability circles in the Smith Chart for the input and output are shown in F
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/stability-circles.png}
+    \includegraphics[width=0.4\textwidth]{Images/stability-circles.png}
     \caption{Stability circles for the input and output of the LNA.}
     \label{fig:StabilityCircles}
 \end{figure}
@@ -219,7 +219,7 @@ And the maximum power transfer from the transistor to the output matching networ
     \Gamma_{out} = \Gamma_{l}^*
     \label{eq:GammaL=GammaS}
 \end{equation}
-where $\Gamma_{in}$ and $\Gamma_{out}$ are the reflection coefficients at the input and output of the transistor, respectively, and $\Gamma_{s}$ and $\Gamma_{l}$ are the reflection coefficients at the source and load impedances, respectively. Using the equations obtain in \cite{Pozar}, the expression that result in the reflection coefficients at the input and output of the transistor are:
+where $\Gamma_{in}$ and $\Gamma_{out}$ are the reflection coefficients at the input and output of the transistor, respectively, and $\Gamma_{s}$ and $\Gamma_{l}$ are the reflection coefficients at the source and load impedances, respectively. Using the equations obtain in \cite{Pozar}, the expressions that result in the reflection coefficients at the input and output of the transistor are:
 
 \begin{equation}
     B_1 = 1 + |S_{11}^2| - |S_{22}|^2 - |\Delta|^2 
@@ -314,7 +314,7 @@ The resulting normalized impedances at the source and load are shown in Table \r
 The Smith Chart representation of the normalized impedances at the source and load is shown in Figure \ref{fig:ZsZl}, where the normalized impedances are represented as points.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/ZsZl-smithChart.png}
+    \includegraphics[width=0.4\textwidth]{Images/ZsZl-smithChart.png}
     \caption{Normalized impedances at the source and load of the transistor in the Smith Chart.}
     \label{fig:ZsZl}
 \end{figure}
@@ -333,7 +333,7 @@ The matching using the Smith Chart for the input and output are shown in Figures
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/zs-lc-match.png}
+    \includegraphics[width=0.4\textwidth]{Images/zs-lc-match.png}
     \caption{Smith chart for input matching with lumped elements.}
     \label{fig:zs-LC-matching}
 \end{figure}
@@ -349,7 +349,7 @@ The adaptation mesh for the input was done with a shunt capacitor and a series i
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/zl-lc-match.png}
+    \includegraphics[width=0.4\textwidth]{Images/zl-lc-match.png}
     \caption{Smith chart for output matching with lumped elements.}
     \label{fig:zl-LC-matching}
 \end{figure}
@@ -459,10 +459,12 @@ Matching for z inside the $1+jx$ circle:
 
 \begin{equation}
     B = \frac{x_l \pm \sqrt{rl/z_0}\sqrt{r_l^2 + x_l^2- z_0 r_l}}{r_l^2+ x_l^2}
+    \label{eq:Binside}
 \end{equation}
 
 \begin{equation}
     X = \frac{1}{B}+\frac{x_l z_0}{r_l}-\frac{z_0}{Br_l}
+    \label{eq:Xinside}
 \end{equation}
 
 For this case the network is designed with a series reactance and a shunt suspectance, where $B$ is the component suspectance and $X$ the component reactance, as shown in Figure \ref{fig:inside-matching}.
@@ -476,10 +478,12 @@ For this case the network is designed with a series reactance and a shunt suspec
 Matching for z outside the $1+jx$ circle:
 \begin{equation}
     X = \pm \sqrt{r_l(z_0-r_l)}-x_l
+    \label{eq:Xoutside}
 \end{equation}
 
 \begin{equation}
     B = \pm \frac{\sqrt{(z_0-rl)/r_l}}{z_0}
+    \label{eq:Boutside}
 \end{equation}
 
 For this case the network is designed with a shunt suspectance and a series reactance, as shown in Figure \ref{fig:outside-matching}.
@@ -523,26 +527,26 @@ The resulting circuit, with the final values, is shown in Figure \ref{fig:Matchi
     \label{fig:MatchingCircuit}
 \end{figure}
 
-\subsubsection{Matching lines and stubs}
+\subsubsection{Matching lines and stubs \textcolor{red}{completar}}
 The matching networks were also designed using transmission lines and stubs, this type of adaptation allows greater frequencies (more than 1 \si{\giga \hertz}) in real conditions. The input and output impedances of the transistor were transformed to $50\,\si{\ohm}$ using a combination of transmission lines and stubs. The values of the components were also calculated using the equations for impedance transformation to validate the results.
 
 The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-line-matching} and \ref{fig:zl-line-matching}.
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{Images/zs-LS-matching.png}
-%     \caption{Smith chart for input matching with lines and stubs}
-%     \label{fig:zs-line-matching}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/zs-LS-matching.png}
+    \caption{Smith chart for input matching with lines and stubs}
+    \label{fig:zs-line-matching}
+\end{figure}
 
 The adaptation mesh for the input was done with an open circuit shunt stub and a series line. 
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{Images/zl-LS-matching.png}
-%     \caption{Matching circuit for input with lines and stubs}
-%     \label{fig:zl-line-matching}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/zl-LS-matching.png}
+    \caption{Matching circuit for input with lines and stubs}
+    \label{fig:zl-line-matching}
+\end{figure}
 
 The adaptation mesh for the output is done with a series line and an open circuit shunt stub.
 
@@ -555,4 +559,254 @@ The final circuit is shown in Figure \ref{fig:MatchingCircuit-line}, where the i
     \label{fig:MatchingCircuit-line}
 \end{figure}
 
-%\subsection{Gain and Noise Factor}
+\subsubsection{Constant Gain circles}
+
+A Python script (Appendix \ref{appendix:python_script}) was made, in line with \cite{Gillermo-Gonzalez}, to calculate the constant gain circles for the input and output matching networks and plot it in the Smith Chart, which are shown in Figure \ref{fig:ConstantGainCircles}. The constant gain circles are used to visualize the gain of the LNA for different source and load impedances. For maximum gain, the source and load impedances should be located on the crosses that represent the maximum gain circles.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/ConstantGainCircles.png}
+    \caption{Constant gain circles for the input matching network.}
+    \label{fig:ConstantGainCircles}
+\end{figure}
+
+\subsection{Input and output matching networks for Minimum Noise}
+
+After designing the LNA for maximum gain, the next step is to design the input and output matching networks for minimum noise. The goal is to minimize the noise figure ($F$). 
+
+The noise figure is a measure of how much noise the LNA adds to the signal. The lower the noise figure, the better the LNA performs in terms of noise. And it can be defined as \textsuperscript{\cite{Gillermo-Gonzalez}}:
+
+\begin{equation}
+    F = \frac{P_{No}}{P_{Ni}G_A}
+    \label{eq:NoiseFigure}
+\end{equation}
+
+Where $P_{No}$ is the output available noise power, $P_{Ni}$ is the input a<vailable noise power due to $R_n$ and $G_A$ is the available gain of the LNA.
+
+The available gain of the LNA is defined as:
+\begin{equation}
+    G_A = \frac{P_{So}}{P_{Si}}
+    \label{eq:AvailableGain}
+\end{equation}
+
+Where $P_{So}$ is the output available signal power and $P_{Si}$ is the input available signal power.
+
+Thus, rewriting equation \ref{eq:NoiseFigure} in terms of the available gain, the noise figure can be expressed as:
+
+\begin{equation}
+    F = \frac{P_{Si}/P_{Ni}}{P_{So}/P_{No}} = \frac{SNR_i}{SNR_o}
+    \label{eq:NoiseFigure2}
+\end{equation}
+
+When working with scattering and noise parameters, the noise figure can be expressed as \textsuperscript{\cite{Gillermo-Gonzalez}}:
+\begin{equation}
+    F = F_{min} + \frac{r_n}{g_s}|y_s -y_{opt}|^2
+    \label{eq:NoiseFigure3}
+\end{equation}
+
+Where $F_{min}$ is the minimum noise figure, $r_n$ is the normalized noise resistance, $g_s$ is the normalized source conductance and $y_s$ is the normalized source admittance. The $y_{opt}$ is the optimal source admittance that minimizes the noise figure to the value $F_{min}$.
+
+The following noise parameters where obtain in cadence from the transistor model without any matching network, and compiled in Table \ref{tab:NoiseParameters}.
+
+\begin{table}[H]
+    \centering
+    \caption{Noise parameters of the transistor.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $F_{min}$     & $2,171$ \\
+        \midrule
+        $r_n$     & $9.505\,\si{\ohm}$\\
+        \midrule
+        $g_s$   & $1.11479037\,\si{\siemens}$ \\
+        \midrule
+        $y_s$   & $1.11479037+2.54323358j\,\si{\siemens}$ \\
+        \midrule
+        $y_{opt}$     & $0.02750192+0.00928327j\,\si{\siemens}$\\
+        \midrule
+        $\Gamma_s$     & $-0.1889065597-0.1585114245j$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:NoiseParameters}
+\end{table}
+
+Once again a Python script (Appendix \ref{appendix:python_script}) was made to calculate and plot the constant input noise figure circles in the Smith Chart, which are shown in Figure \ref{fig:ConstantNoiseCircles}. The constant noise figure circles are used to visualize the noise figure of the LNA for different source and load impedances. For minimum noise, the source and load impedances should be located on the points that represent the minimum noise figure circles.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/ConstantNoiseCircles.png}
+    \caption{Constant noise figure circles for the input matching network.}
+    \label{fig:ConstantNoiseCircles}
+\end{figure}    
+
+In order to do the impedance matching for minimum noise, the output reflection coefficient has to be calculated with the following equation \textsuperscript{\cite{Slides}}:
+\begin{equation}
+    \Gamma_{L} = (\frac{s_{22}+(s_{12}s_{21}\Gamma_s)}{1-s_{11}\Gamma_s})^*
+    \label{eq:GammaL-noise}
+\end{equation}
+
+Now for the sake of simplicity, the reflection coefficients were transformed to the normalized impedances using Equations \ref{eq:Zs} and \ref{eq:Zl}.
+
+In table \ref{tab: noise-impedances} the normalized impedances at the source and load for minimum noise are shown, where the values are calculated using the reflection coefficients obtained in the previous step.
+
+\begin{table}[H]
+    \centering
+    \caption{Normalized impedances at the source and load for minimum noise.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $z_{S}$     & $0.652838-0.2203652j$ \si{\ohm} \\
+        \midrule
+        $z_{L}$     & $1.07281071+0.65421904j$\si{\ohm}\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab: noise-impedances}
+\end{table}
+
+In figure \ref{fig:ZsZl-noise} the normalized impedances at the source and load for minimum noise are shown in the Smith Chart.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/ZsZl-noise-smithChart.png}
+    \caption{Normalized impedances at the source and load for minimum noise in the Smith Chart.}
+    \label{fig:ZsZl-noise}
+\end{figure}
+
+Since the Python script (Appendix \ref{appendix:python_script}) for calculating the matching networks has already been verified in the previous section, in this section the matching networks were calculated using it, without the use of the Smith Chart. The equations used in the script are the same as in the previous section, but with the values of the normalized impedances at the source and load for minimum noise.
+
+\subsubsection{Matching with lumped elements for minimum noise}
+
+Using the same matching circuits as in the previous sections, depicted in Figures \ref{fig:MatchingCircuit-input} and \ref{fig:MatchingCircuit-output}, the values of the components were calculated using the Equations \ref{eq:Binside} to \ref{eq:Boutside}.
+The results of the matching networks for minimum noise using the analytic approach are shown in Table \ref{tab:MatchingValues-noise}, where the values of the components are calculated based on the input and output impedances of the transistor for minimum noise.
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks for minimum noise using the analytic approach.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $C_{in}$ \quad (shunt)    & $0.5798506944259898\,\si{\pico\farad}$ \\
+        \midrule
+        $L_{in}$  \quad(series)   & $0.5083089871809204\,\si{\nano\henry}$\\
+        \midrule
+        $L_{1out}$ \quad (shunt)   & $2.25632568\,\si{\nano\henry}$ \\
+        \midrule
+        $L_{2out}$ \quad (series)   & $1.36538599\,\si{\nano\henry}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValues-noise}
+\end{table}
+
+In Figure \ref{fig:MatchingCircuit-noise} the final circuit with the values of the components for minimum noise is shown, where the input and output matching networks are designed using a combination of inductors and capacitors.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/LC-noise-matching-circuit.png}
+    \caption{Matching circuit for input and output with final values for minimum noise.}
+    \label{fig:MatchingCircuit-noise}
+\end{figure}
+
+\subsubsection{Matching lines and stubs for minimum noise \textcolor{red}{completar}}
+
+\subsection{Gain-Noise Optimization}
+
+To optimize the LNA for both gain and noise, a trade-off between the two parameters is necessary. The goal is to find a balance between the maximum gain and the minimum noise figure. To obtain this result the input gain circles and the input noise circles were plotted in the Smith Chart and analyzed, the plot is shown in Figure \ref{fig:GainNoiseOptimization}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/GainNoiseOptimization.png}
+    \caption{Gain and noise circles for the input matching network.}
+    \label{fig:GainNoiseOptimization}
+\end{figure}
+The intersection of the gain and noise circles represents the optimal point for the LNA, where the gain is maximized ($G = 21$) while the noise figure is minimized ($F = 3 \si{\decibel}$).
+
+In table \ref{tab:GainNoiseOptimization} the values of the intersection points of the 21 gain circle and the 3 dB noise figure circle are shown, where the values were calculated using the Python script (Appendix \ref{appendix:python_script}).
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the intersection points of the gain and noise circles.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $\Gamma_{A1}$     & $-0.30695536-0.15142555j$ \si{\ohm} \\
+        \midrule
+        $\Gamma_{A2}$     & $-0.22141437-0.27183862j$ \si{\ohm} \\
+        \midrule
+        $z_{A1}$     & $0.51000409-0.17495104j$ \si{\ohm} \\
+        \midrule
+        $z_{A2}$     & $0.56016594-0.34723135j$\si{\ohm}\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:GainNoiseOptimization}
+\end{table}
+
+For the following calculations $\Gamma_s = \Gamma_{A1}$ and $z_{A1} = z_s$ will be used.
+
+Once agian in order do obtain a bilateral matching network, the output reflection coefficient has to be calculated with the equation  \ref{eq:GammaL-noise}. Withthe reflection coefficient value, it is possible to obtain the normalized impedance at the load using the equation \ref{eq:Zl}.
+
+In table \ref{gain-noise-impedances} the normalized impedances at the source and load and the reflection coefficients for gain-noise optimization are shown.
+
+\begin{table}[H]
+    \centering
+    \caption{Normalized impedances at the source and load for gain-noise optimization.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $z_{S}$     & $0.51000409-0.17495104j$ \si{\ohm} \\
+        \midrule
+        $z_{L}$     & $0.95353092+0.74623035j$\si{\ohm}\\
+        \midrule
+        $\Gamma_{S}$     & $-0.30695536-0.15142555j$\\
+        \midrule
+        $\Gamma_{L}$     & $0.10657803+0.34127875j$\\
+        \bottomrule
+    \end{tabularx}
+    \label{gain-noise-impedances}
+\end{table}
+
+In Figure \ref{fig:ZsZl-gain-noise} the normalized impedances at the source and load for gain-noise optimization are shown in the Smith Chart.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/gain-noise-SC.png}
+    \caption{Normalized impedances at the source and load for gain-noise optimization in the Smith Chart.}
+    \label{fig:ZsZl-gain-noise}
+\end{figure}
+
+\subsubsection{Matching with lumped elements for gain-noise optimization}
+
+Using the same matching circuits as in the previous sections, depicted in Figures \ref{fig:MatchingCircuit-input} and \ref{fig:MatchingCircuit-output}, the values of the components were calculated using the Equations \ref{eq:Binside} to \ref{eq:Boutside} in the Python script (Appendix \ref{appendix:python_script}).
+
+The results of the matching networks for gain-noise optimization using the analytic approach are shown in Table \ref{tab:MatchingValues-gain-noise}.
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks for gain-noise optimization using the analytic approach.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $C_{in}$ \quad (shunt)    & $0.779402735\,\si{\pico\farad}$ \\
+        \midrule
+        $L_{in}$  \quad(series)   & $0.64596288\,\si{\nano\henry}$\\
+        \midrule
+        $L_{1out}$ \quad (shunt)   & $9.00487954\,\si{\nano\henry}$ \\
+        \midrule
+        $L_{2out}$ \quad (series)   & $1.06497606\,\si{\nano\henry}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValues-gain-noise}
+\end{table}
+
+In Figure \ref{fig:MatchingCircuit-gain-noise} the final circuit with the values of the components for gain-noise optimization is shown.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/gain-noise-final-circuit.png}
+    \caption{Matching circuit for input and output with final values for gain-noise optimization.}
+    \label{fig:MatchingCircuit-gain-noise}
+\end{figure}
+
+\subsubsection{Matching lines and stubs for gain-noise optimization \textcolor{red}{completar}}
