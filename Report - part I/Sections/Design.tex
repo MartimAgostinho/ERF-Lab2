@@ -311,6 +311,13 @@ The resulting normalized impedances at the source and load are shown in Table \r
     \label{tab:Impedances}
 \end{table}
 
+The Smith Chart representation of the normalized impedances at the source and load is shown in Figure \ref{fig:ZsZl}, where the normalized impedances are represented as points.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/ZsZl-smithChart.png}
+    \caption{Normalized impedances at the source and load of the transistor in the Smith Chart.}
+    \label{fig:ZsZl}
+\end{figure}
 
 
 
@@ -326,51 +333,193 @@ The matching using the Smith Chart for the input and output are shown in Figures
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Images/zs-LC-matching.png}
-    \caption{Smith chart for input matching with lumped elements}
+    \includegraphics[width=0.6\textwidth]{Images/zs-lc-match.png}
+    \caption{Smith chart for input matching with lumped elements.}
     \label{fig:zs-LC-matching}
 \end{figure}
 
-The adaptation mesh for the input was done with a shunt inductor and a series capacitor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-input}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
+The adaptation mesh for the input was done with a shunt capacitor and a series inductor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-input}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/Input-matching-circuit.png}
-    \caption{Matching circuit for input}
+    \caption{Matching circuit for input.}
     \label{fig:MatchingCircuit-input}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Images/zl-LC-matching.png}
-    \caption{Smith chart for output matching with lumped elements}
+    \includegraphics[width=0.6\textwidth]{Images/zl-lc-match.png}
+    \caption{Smith chart for output matching with lumped elements.}
     \label{fig:zl-LC-matching}
 \end{figure}
 
-The adaptation mesh for the output is done with a series capacitor and a shunt inductor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-output}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
+The adaptation mesh for the output is done with a series inductor and a shunt inductor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-output}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/Ouput-matching-circuit.png}
-    \caption{Matching circuit for output}
+    \caption{Matching circuit for output.}
     \label{fig:MatchingCircuit-output} 
 \end{figure}
+
+After retrieving the values of the in-between impedances $Z_a$ from the Smith Chart, it is possible to obtain the values of the components using the following equations \textsuperscript{\cite{Pozar}}:
+
+\vspace{0.4cm}
+Series inductor:
+\begin{equation}
+    \begin{split}
+        z_L = z_2 -  z_1 = jx \quad(x > 0)\\
+        L = \frac{xZ_0}{\omega}
+    \end{split}
+    \label{eq:SeriesInductor}
+\end{equation}
+
+Shunt Inductor:
+\begin{equation}
+    \begin{split}
+       y_L = y_2 -  y_1 = -jb \quad(b > 0)\\
+        L = \frac{Z_0}{b\omega} 
+    \end{split}
+    \label{eq:ShuntInductor}
+\end{equation}
+
+Series Capacitor:
+\begin{equation}
+    \begin{split}
+        z_C = z_2 -  z_1 = -jx \quad(x > 0)\\
+        C = \frac{1}{xZ_0\omega}
+    \end{split}
+    \label{eq:SeriesCapacitor}
+\end{equation}
+
+Shunt Capacitor:
+\begin{equation}
+    \begin{split}
+        y_C = y_2 -  y_1 = jb \quad(b > 0)\\
+        C = \frac{b}{Z_0\omega}
+    \end{split}
+    \label{eq:ShuntCapacitor}
+\end{equation}
+
+\vspace{0.4cm}
+From input in-between impedance $Z_a = 0,14-0,34j$ and the configuration chosen in the smith chart represented in Figure \ref{fig:MatchingCircuit-input}, the values of the components are calculated as follows:
+
+\vspace{0.4cm}
+Shunt Capacitor:
+\begin{equation}
+    \begin{split}
+        y_C =y_a-y_0 = 1+2,5j - 1 = 2,5j\\
+        b = 2,5 \\
+        C_{in} = \frac{2,5}{2\pi410^9Z_0} = 1,989\,\si{\pico\farad}
+    \end{split}
+    \label{eq:InputCap}
+\end{equation}
+
+Series Inductor:
+\begin{equation}
+    \begin{split}
+        z_L = z_s - z_a = 0,14-0,33j - 0.14 - 0,34j = 0,01j\\
+        x = 0,01 \\
+        L_{in} = \frac{0,01\cdot Z_0}{2\pi410^9} = 198,9\,\si{\femto\henry}
+    \end{split}
+    \label{eq:InputInd}
+\end{equation}
+
+From output in-between impedance $Z_a = 0,6+0,48j$ and the configuration chosen in the Smith Chart represented in Figure \ref{fig:MatchingCircuit-output}, the values of the components are calculated as follows:
+
+\vspace{0.4cm}
+Shunt Inductor:
+\begin{equation}
+    \begin{split}
+        y_L = y_a - y_0 = 1-0.81- 1 = -0,81j\\
+        b = 0,81 \\
+        L_{1out} = \frac{Z_0}{0,81\cdot2\pi4\cdot10^9} = 2,46\,\si{\nano\henry}
+    \end{split}
+    \label{eq:OutputIndShunt}
+\end{equation}
+
+Series Inductor:
+\begin{equation}
+    \begin{split}
+        z_L = z_l - z_a = 0,6 + 1,4j - 0,6 + 0,48 = 0,92j\\
+        x = 0,92 \\
+        L_{2out} = \frac{0,92\cdot Z_0}{2\pi4\cdot10^9} = 1,83\,\si{\nano\henry}
+    \end{split}
+    \label{eq:OutputInd}
+\end{equation}
 
 \vspace{0.4cm}
 \textbf{Results with analytic approach:}
 \vspace{0.4cm}
 
-The matching using the analytic approach was done using a Python script that calculates the values of the components based on the input and output impedances of the transistor. The input and output impedances of the transistor were transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors, in this case a L-section matching network.
-The values of the components were also calculated using the equations for impedance transformation to validate the results. The input and output matching networks are shown in Figures \ref{fig:MatchingCircuit}.
+The matching using the analytic approach was done using a Python script (Appendix \ref{appendix:python_script}) that calculates the values of the components based on the input and output impedances of the transistor. The equations used in the script are the following\textsuperscript{\cite{Pozar}}:
 
+Matching for z inside the $1+jx$ circle:
 
+\begin{equation}
+    B = \frac{x_l \pm \sqrt{rl/z_0}\sqrt{r_l^2 + x_l^2- z_0 r_l}}{r_l^2+ x_l^2}
+\end{equation}
 
-The resulting circuit is shown in Figure \ref{fig:MatchingCircuit}, where the input and output matching networks are designed using a combination of inductors and capacitors.
+\begin{equation}
+    X = \frac{1}{B}+\frac{x_l z_0}{r_l}-\frac{z_0}{Br_l}
+\end{equation}
 
+For this case the network is designed with a series reactance and a shunt suspectance, where $B$ is the component suspectance and $X$ the component reactance, as shown in Figure \ref{fig:inside-matching}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/LC_matching-circuit.png}
-    \caption{Matching circuit for input and output with values}
+    \includegraphics[width=0.5\textwidth]{Images/outside-matching.png}
+    \caption{Matching circuit for z inside the $1+jx$ circle.}
+    \label{fig:inside-matching}
+\end{figure}
+
+Matching for z outside the $1+jx$ circle:
+\begin{equation}
+    X = \pm \sqrt{r_l(z_0-r_l)}-x_l
+\end{equation}
+
+\begin{equation}
+    B = \pm \frac{\sqrt{(z_0-rl)/r_l}}{z_0}
+\end{equation}
+
+For this case the network is designed with a shunt suspectance and a series reactance, as shown in Figure \ref{fig:outside-matching}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/inside-matching.png}
+    \caption{Matching circuit for z outside the $1+jx$ circle.}
+    \label{fig:outside-matching}
+\end{figure}
+
+With $B$ being the component suspectance and $X$ the component reactance, $r_l$ the real part of the impedance $z$ and $x_l$ the imaginary part of the  normalized impedance $z$.
+
+The results of the matching networks using the analytic approach are shown in Table \ref{tab:MatchingValues}, where the values of the components are calculated based on the input and output impedances of the transistor.
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks using the analytic approach.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $C_{in}$     & $1.93417775\,\si{\pico\farad}$ \\
+        \midrule
+        $L_{in}$     & $43.4243305\,\si{\pico\henry}$\\
+        \midrule
+        $L_{1out}$   & $2.4877816\,\si{\nano\henry}$ \\
+        \midrule
+        $L_{2out}$   & $1.8095882\,\si{\nano\henry}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValues}
+\end{table}
+
+Comparing the values obtained from the Smith Chart and the analytic approach, it is possible to see that the values are very similar, with a difference of less than $5\%$ in all cases. This validates the results obtained from the Smith Chart.
+
+The resulting circuit, with the final values, is shown in Figure \ref{fig:MatchingCircuit}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/LC_matching-circuit.png}
+    \caption{Matching circuit for input and output with final values.}
     \label{fig:MatchingCircuit}
 \end{figure}
 
