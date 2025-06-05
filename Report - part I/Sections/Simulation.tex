@@ -8,7 +8,7 @@ First, using the LTSpice, the T502 transistor was added and the parasites capaci
 
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale = 0.3]{Images/TransistorReal.png}
+    \includegraphics[width=0.5\textwidth]{Images/TransistorReal.png}
     \caption{Transistor with package effects}
     \label{fig:TransistorReal}
 \end{figure}
@@ -18,7 +18,7 @@ After this, the biasing circuit of the transistor for the required  parameters i
 
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale = 0.3]{Images/SIMBiasCircuit.png}
+    \includegraphics[width=0.5\textwidth]{Images/SIMBiasCircuit.png}
     \caption{Biasing circuit simulated}
     \label{fig:SIMBiasCircuit}
 \end{figure}
@@ -51,7 +51,7 @@ As mentioned before, the first step in designing a matching network in an LNA is
 
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale = 0.3]{Images/S-paramCircuit.png}
+    \includegraphics*[scale = 0.5]{Images/S-paramCircuit.png}
     \caption{Circuit for the S-parameters}
     \label{fig:SIMS-paramCircuit}
 \end{figure}
@@ -60,16 +60,8 @@ The resulting S-parameters can be seen in Figure \ref{fig:SimS-param}.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{0.4\textwidth}
-        \includegraphics[width=1\textwidth]{Images/S-paramdB.png}
-        \caption{S-parameters in dB}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.4\textwidth}
-        \includegraphics[width=1\textwidth]{Images/S-paramLin.png}
-        \caption{S-parameters in linear}
-    \end{subfigure}
-    \caption{S-parameters of the LNA}
+    \includegraphics[width=1\textwidth]{Images/s-param-notmatched.png}
+    \caption{S-parameters for the LNA circuit}
     \label{fig:SimS-param}
 \end{figure}
 
@@ -77,7 +69,7 @@ After assuming a working frequency of $4 GHz$, the resulting matching networks u
 
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale = 0.3]{Images/SIMLCmatchingcircuit.png}
+    \includegraphics*[scale = 0.5]{Images/SIMLCmatchingcircuit.png}
     \caption{Matching networks using inductors and capacitors}
     \label{fig:SIMLCMatchingCircuit}
 \end{figure}
@@ -168,3 +160,24 @@ And for transmission lines and stubs in Figure \ref{fig:NoiseLS}.
     \caption{Noise for the matching networks using transmission lines and stubs in Cadence}
     \label{fig:NoiseLS}
 \end{figure}
+
+\subsection{Simulation without matching networks}
+
+simulação LTSpice
+
+simulação cadence
+
+\subsection{Simulation for Maximum Gain Adaptation}
+
+simulação LTSpice
+
+simulação cadence
+
+
+\subsection{Simulation for Minimum Noise Adaptation}
+
+simulação cadence
+
+\subsection{Simulation for Noise-Gain Adaptation}
+
+simulação cadence
