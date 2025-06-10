@@ -1,4 +1,4 @@
-\section{Simulation}
+\section{Simulation and Results analysis}
 
 In order to simulate the LNA, the LTSpice and Cadence software were used to validate the results obtain in the previous section. 
 
@@ -206,7 +206,21 @@ The results of the simulation in Cadence can be seen in Figure \ref{fig:CadenceN
     \label{fig:CadenceNoiseMatchingCircuit}
 \end{figure}
 
-The Noise factor for the matching networks at $4 GHz$ obtain was $2.17 \si{\decibel}$, which is similar to the expected value of $2.17 \si{\decibel}$ calculated in the previous section, so, the matching networks using lumped circuit elements for minimum noise are working properly.
+In table \ref{tab:NoiseMatchingParameters} the summarized results of the matching networks using lumped circuit elements for minimum noise can be seen.
+\begin{table}[H]
+    \centering
+    \caption{Matching network results for minimum noise in Cadence.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Theoretical Noise Factor  & $2.17 \si{\decibel}$ \\
+        \midrule
+        Cadence Noise Factor & $2.17 \si{\decibel}$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:NoiseMatchingParameters}
+\end{table}
 
 \subsubsection{Matching networks using transmission lines and stubs}
 
@@ -220,7 +234,21 @@ The results of the simulation in Cadence can be seen in Figure \ref{fig:CadenceN
     \label{fig:CadenceNoiseMatchingCircuitLine}
 \end{figure}
 
-The Noise factor for the matching networks at $4 GHz$ obtain was $2.17 \si{\decibel}$, which is similar to the expected value of $2.17 \si{\decibel}$ calculated in the previous section, so, the matching networks using transmission lines and stubs for minimum noise are working properly.
+In table \ref{tab:NoiseMatchingParameters} the summarized results of the matching networks using transmission lines and stubs can be seen.
+\begin{table}[H]
+    \centering
+    \caption{Matching network results for minimum noise in Cadence.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Theoretical Noise Factor  & $2.17 \si{\decibel}$ \\
+        \midrule
+        Cadence Noise Factor & $2.17 \si{\decibel}$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:NoiseMatchingParameters}
+\end{table}
 
 \subsection{Simulation for Noise-Gain Adaptation}
 
@@ -228,17 +256,35 @@ In order to adapt the LNA for minimum noise figure and maximum gain, the matchin
 
 \subsubsection{Matching networks using Lumped circuit elements}
 
-The matching networks for input and output depicted in Figure \ref{fig:MatchingCircuit-noise-gain} were used to perform the simulation and validate the results.
+The matching networks for input and output depicted in Figure \ref{ffig:MatchingCircuit-gain-noise} were used to perform the simulation and validate the results.
 
 The results of the simulation in Cadence can be seen in Figure \ref{fig:CadenceNoiseGainMatchingCircuit}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/CAD-LinesmatchNoiseGain.png}
+    \includegraphics[width=1\textwidth]{Images/CAD_LCmatchNoiseGain.png}
     \caption{Matching networks using lumped circuit elements for minimum noise and maximum gain in Cadence.}
     \label{fig:CadenceNoiseGainMatchingCircuit}
 \end{figure}
 
-The Noise factor for the matching networks at $4 GHz$ obtain was $2.2 \si{\decibel}$, which is similar to the expected value of $3 \si{\decibel}$ calculated in the previous section, and the gain was $13.04 \si{\decibel}$, which is also similar to the expected value of $13.22 \si{\decibel}$ calculated in the previous section, so, the matching networks using lumped circuit elements for minimum noise and maximum gain are working properly.
+In table \ref{tab:NoiseGainMatchingParameters} the summarized results of the matching networks using lumped circuit elements for minimum noise and maximum gain can be seen.
+\begin{table}[H]
+    \centering
+    \caption{Lumped elements Matching network results for minimum noise and maximum gain in Cadence.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Theoretical Noise Factor  & $3 \si{\decibel}$ \\
+        \midrule
+        Cadence Noise Factor & $2.2 \si{\decibel}$ \\
+        \midrule
+        Theoretical Gain & $13.22 \si{\decibel}$ \\
+        \midrule
+        Cadence Gain & $13.11 \si{\decibel}$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:NoiseGainMatchingParameters}
+\end{table}
 
 \subsubsection{Matching networks using transmission lines and stubs}
 
@@ -253,4 +299,24 @@ The results of the simulation in Cadence can be seen in Figure \ref{fig:CadenceN
     \label{fig:CadenceNoiseGainMatchingCircuitLine}
 \end{figure}
 
-The Noise factor for the matching networks at $4 GHz$ obtain was $2.2 \si{\decibel}$, which is similar to the expected value of $3 \si{\decibel}$ calculated in the previous section, and the gain was $13.04 \si{\decibel}$, which is also similar to the expected value of $13.22 \si{\decibel}$ calculated in the previous section, so, the matching networks using transmission lines and stubs for minimum noise and maximum gain are working properly.
+In table \ref{tab:NoiseGainMatchingParametersLine} the summarized results of the matching networks using transmission lines and stubs for minimum noise and maximum gain can be seen.
+\begin{table}[H]
+    \centering
+    \caption{Lines and Stubs Matching network results for minimum noise and maximum gain in Cadence.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Theoretical Noise Factor  & $3 \si{\decibel}$ \\
+        \midrule
+        Cadence Noise Factor & $2.2 \si{\decibel}$ \\
+        \midrule
+        Theoretical Gain & $13.22 \si{\decibel}$ \\
+        \midrule
+        Cadence Gain & $13.04 \si{\decibel}$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:NoiseGainMatchingParametersLine}
+\end{table}
+
+The results obtain alongside this section show that the type of matching network used does not affect the noise figure of the circuit or thegain, since both types of matching networks obtained results very close to the theoretical values. The choise of implementation of the matching networks will depend on the application and the available components, since the lumped circuit elements are easier to implement, but the transmission lines and stubs are more suitable for high frequency applications, like this one.
