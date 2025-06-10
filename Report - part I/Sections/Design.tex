@@ -82,13 +82,13 @@ Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
 
 \subsection{S-parameters with packaging effects}
 
-The diagram of the LNA is shown in Figure \ref{fig:LNA-diagram}, where the LNA has arbitrary input and output impedances different from $50\,\si{\ohm}$ and reflection coefficients.
+The diagram of the LNA is shown in Figure \ref{fig:LNA-diagram-no-match}, where the LNA has arbitrary input and output impedances different from $50\,\si{\ohm}$ and reflection coefficients.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/LNA-diagram-no-match.png}
     \caption{LNA diagram with reflection coefficients and no matching networks.}
-    \label{fig:LNA-diagram}
+    \label{fig:LNA-diagram-no-match}
 \end{figure}
 
 With the biasing circuit designed, the next step was to simulate the S-parameters of the transistor in LTSpice.  The S-parameters were taken for a frequency range of $1\,\si{\giga\hertz}$ to $10\,\si{\giga\hertz}$, Figure \ref{fig:withoutmathing} shows the S-parameters of the transistor without any matching network.
@@ -710,7 +710,7 @@ The final circuit is shown in Figure \ref{fig:MatchingCircuit-line}, where the i
 
 \subsubsection{Constant Gain circles}
 
-A Python script (Appendix \ref{appendix:python_script}) was made, in line with \cite{Gillermo-Gonzalez}, to calculate the constant gain circles for the input and output matching networks and plot it in the Smith Chart, which are shown in Figure \ref{fig:ConstantGainCircles}. The constant gain circles are used to visualize the gain of the LNA for different source and load impedances. For maximum gain, the source and load impedances should be located on the crosses that represent the maximum gain circles.
+A Python script (Appendix \ref{appendix:python_script}) was made, in line with \cite{Gillermo-Gonzalez}, to calculate the constant gain circles for the input and output matching networks and plot it in the Smith Chart, which are shown in Figure \ref{fig:ConstantGainCircles}. The constant gain circles are used to visualize the gain of the LNA for different source and load impedances. For maximum gain, the source and load impedances should be located on the crosses that represent the maximum gain circles, in this case represent $26,1$ in linear scale or $14,17 \si{\decibel}$.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{Images/ConstantGainCircles.png}
@@ -779,7 +779,7 @@ The following noise parameters where obtain in cadence from the transistor model
     \label{tab:NoiseParameters}
 \end{table}
 
-Once again a Python script (Appendix \ref{appendix:python_script}) was made to calculate and plot the constant input noise figure circles in the Smith Chart, which are shown in Figure \ref{fig:ConstantNoiseCircles}. The constant noise figure circles are used to visualize the noise figure of the LNA for different source and load impedances. For minimum noise, the source and load impedances should be located on the points that represent the minimum noise figure circles.
+Once again a Python script (Appendix \ref{appendix:python_script}) was made to calculate and plot the constant input noise figure circles in the Smith Chart, which are shown in Figure \ref{fig:ConstantNoiseCircles}. The constant noise figure circles are used to visualize the noise figure of the LNA for different source and load impedances. For minimum noise, the source and load impedances should be located on the points that represent the minimum noise figure circles,in this case the crosses, that reoresent $2,2 \si{\decibel}$ corresponding to the minimum noise figure of the transistor.
 
 \begin{figure}[H]
     \centering

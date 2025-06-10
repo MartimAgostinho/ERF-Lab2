@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.5.15)  4 JUN 2025 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.5.15)  10 JUN 2025 13:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -739,14 +739,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen326
 \c@nlinenum=\count364
 \TeXr@lab=\toks47
-) (./main.aux
-
-LaTeX Warning: Label `fig:LNA-diagram' multiply defined.
-
-
-LaTeX Warning: Label `fig:CadenceLCcircuit' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
@@ -865,26 +858,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[3] (./Sections/Introduction.tex)
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 187.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[4] (./Sections/Design.tex
-<Images/DCBiasNPN.png, id=265, 520.94624pt x 795.97375pt>
+[3] (./Sections/Introduction.tex) (./Sections/Design.tex
+<Images/DCBiasNPN.png, id=258, 520.94624pt x 795.97375pt>
 File: Images/DCBiasNPN.png Graphic file (type png)
 <use Images/DCBiasNPN.png>
 Package pdftex.def Info: Images/DCBiasNPN.png  used on input line 11.
 (pdftex.def)             Requested size: 156.28508pt x 238.79396pt.
-<Images/VthBiasCircuit.png, id=267, 593.21625pt x 773.89125pt>
+<Images/VthBiasCircuit.png, id=260, 593.21625pt x 773.89125pt>
 File: Images/VthBiasCircuit.png Graphic file (type png)
 <use Images/VthBiasCircuit.png>
 Package pdftex.def Info: Images/VthBiasCircuit.png  used on input line 16.
@@ -893,7 +873,7 @@ Package pdftex.def Info: Images/VthBiasCircuit.png  used on input line 16.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 52.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 32.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -902,13 +882,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[5 <./Images/DCBiasNPN.png> <./Images/VthBiasCircuit.png>]
-<Images/LNA-diagram-no-match.png, id=290, 2320.67pt x 871.255pt>
+[4 <./Images/DCBiasNPN.png> <./Images/VthBiasCircuit.png>]
+<Images/LNA-diagram-no-match.png, id=278, 2320.67pt x 871.255pt>
 File: Images/LNA-diagram-no-match.png Graphic file (type png)
 <use Images/LNA-diagram-no-match.png>
 Package pdftex.def Info: Images/LNA-diagram-no-match.png  used on input line 89.
 (pdftex.def)             Requested size: 386.95897pt x 145.26642pt.
-<Images/without-matching.png, id=292, 432.1746pt x 312.2064pt>
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 93.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[5]
+<Images/without-matching.png, id=290, 432.1746pt x 312.2064pt>
 File: Images/without-matching.png Graphic file (type png)
 <use Images/without-matching.png>
 Package pdftex.def Info: Images/without-matching.png  used on input line 98.
@@ -917,7 +911,7 @@ Package pdftex.def Info: Images/without-matching.png  used on input line 98.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 102.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 121.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -926,27 +920,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[6 <./Images/LNA-diagram-no-match.png>]
-<Images/KFactor.png, id=300, 395.3169pt x 328.8285pt>
+[6 <./Images/LNA-diagram-no-match.png> <./Images/without-matching.png>]
+<Images/KFactor.png, id=299, 395.3169pt x 328.8285pt>
 File: Images/KFactor.png Graphic file (type png)
 <use Images/KFactor.png>
 Package pdftex.def Info: Images/KFactor.png  used on input line 141.
 (pdftex.def)             Requested size: 290.22107pt x 241.40758pt.
-
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 145.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[7{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Images/without-matching.png>]
-<Images/MAG.png, id=312, 406.8801pt x 327.3831pt>
+<Images/MAG.png, id=302, 406.8801pt x 327.3831pt>
 File: Images/MAG.png Graphic file (type png)
 <use Images/MAG.png>
 Package pdftex.def Info: Images/MAG.png  used on input line 157.
@@ -955,7 +935,7 @@ Package pdftex.def Info: Images/MAG.png  used on input line 157.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 164.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 161.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -964,13 +944,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[8 <./Images/KFactor.png> <./Images/MAG.png>]
-<Images/stability-circles.png, id=322, 473.3685pt x 487.8225pt>
+[7{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Images/KFactor.png>]
+<Images/stability-circles.png, id=314, 473.3685pt x 487.8225pt>
 File: Images/stability-circles.png Graphic file (type png)
 <use Images/stability-circles.png>
 Package pdftex.def Info: Images/stability-circles.png  used on input line 190.
 (pdftex.def)             Requested size: 193.47578pt x 199.38326pt.
-<Images/LNA-diagram.png, id=324, 3260.18pt x 875.27pt>
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 194.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[8 <./Images/MAG.png>]
+<Images/LNA-diagram.png, id=322, 3260.18pt x 875.27pt>
 File: Images/LNA-diagram.png Graphic file (type png)
 <use Images/LNA-diagram.png>
 Package pdftex.def Info: Images/LNA-diagram.png  used on input line 203.
@@ -979,7 +973,7 @@ Package pdftex.def Info: Images/LNA-diagram.png  used on input line 203.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 207.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 221.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -988,25 +982,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[9 <./Images/stability-circles.png>]
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 284.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[10 <./Images/LNA-diagram.png>]
+[9 <./Images/stability-circles.png> <./Images/LNA-diagram.png>]
 Overfull \hbox (7.0522pt too wide) in paragraph at lines 285--286
 []\OT1/cmr/m/n/12 With the val-ues of the re-flec-tion co-ef-fi-cients at the source and load, the nor-mal-ized impedances
  []
 
-<Images/ZsZl-smithChart.png, id=353, 473.3685pt x 487.8225pt>
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 294.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[10]
+<Images/ZsZl-smithChart.png, id=352, 473.3685pt x 487.8225pt>
 File: Images/ZsZl-smithChart.png Graphic file (type png)
 <use Images/ZsZl-smithChart.png>
 Package pdftex.def Info: Images/ZsZl-smithChart.png  used on input line 317.
@@ -1015,7 +1010,7 @@ Package pdftex.def Info: Images/ZsZl-smithChart.png  used on input line 317.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 321.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 331.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1024,33 +1019,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[11]
-<Images/zs-lc-match.png, id=363, 657.45625pt x 677.53125pt>
+[11 <./Images/ZsZl-smithChart.png>]
+<Images/zs-lc-match.png, id=361, 657.45625pt x 677.53125pt>
 File: Images/zs-lc-match.png Graphic file (type png)
 <use Images/zs-lc-match.png>
 Package pdftex.def Info: Images/zs-lc-match.png  used on input line 334.
 (pdftex.def)             Requested size: 193.47578pt x 199.37375pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/Input-matching-circuit.png, id=365, 1120.185pt x 566.115pt>
+<Images/Input-matching-circuit.png, id=363, 1120.185pt x 566.115pt>
 File: Images/Input-matching-circuit.png Graphic file (type png)
 <use Images/Input-matching-circuit.png>
 Package pdftex.def Info: Images/Input-matching-circuit.png  used on input line 343.
 (pdftex.def)             Requested size: 241.84843pt x 122.222pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/zl-lc-match.png, id=366, 657.45625pt x 677.53125pt>
+<Images/zl-lc-match.png, id=364, 657.45625pt x 677.53125pt>
 File: Images/zl-lc-match.png Graphic file (type png)
 <use Images/zl-lc-match.png>
 Package pdftex.def Info: Images/zl-lc-match.png  used on input line 350.
 (pdftex.def)             Requested size: 193.47578pt x 199.37375pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/Ouput-matching-circuit.png, id=368, 1080.035pt x 397.485pt>
+<Images/Ouput-matching-circuit.png, id=366, 1080.035pt x 397.485pt>
 File: Images/Ouput-matching-circuit.png Graphic file (type png)
 <use Images/Ouput-matching-circuit.png>
 Package pdftex.def Info: Images/Ouput-matching-circuit.png  used on input line 359.
@@ -1071,7 +1060,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[12 <./Images/ZsZl-smithChart.png>]
+[12 <./Images/zs-lc-match.png> <./Images/Input-matching-circuit.png>]
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
@@ -1084,11 +1073,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[13 <./Images/zs-lc-match.png> <./Images/Input-matching-circuit.png>]
+[13 <./Images/zl-lc-match.png> <./Images/Ouput-matching-circuit.png>]
+<Images/outside-matching.png, id=390, 1662.21pt x 762.85pt>
+File: Images/outside-matching.png Graphic file (type png)
+<use Images/outside-matching.png>
+Package pdftex.def Info: Images/outside-matching.png  used on input line 471.
+(pdftex.def)             Requested size: 241.84843pt x 110.98872pt.
+
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 448.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 475.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1097,12 +1092,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[14 <./Images/zl-lc-match.png> <./Images/Ouput-matching-circuit.png>]
-<Images/outside-matching.png, id=400, 1662.21pt x 762.85pt>
-File: Images/outside-matching.png Graphic file (type png)
-<use Images/outside-matching.png>
-Package pdftex.def Info: Images/outside-matching.png  used on input line 471.
-(pdftex.def)             Requested size: 241.84843pt x 110.98872pt.
+[14]
 <Images/inside-matching.png, id=402, 1614.03pt x 762.85pt>
 File: Images/inside-matching.png Graphic file (type png)
 <use Images/inside-matching.png>
@@ -1112,7 +1102,7 @@ Package pdftex.def Info: Images/inside-matching.png  used on input line 490.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 494.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 519.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1121,32 +1111,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[15 <./Images/outside-matching.png>]
-<Images/LC_matching-circuit.png, id=415, 1915.155pt x 348.30125pt>
+[15 <./Images/outside-matching.png> <./Images/inside-matching.png>]
+<Images/LC_matching-circuit.png, id=414, 1915.155pt x 348.30125pt>
 File: Images/LC_matching-circuit.png Graphic file (type png)
 <use Images/LC_matching-circuit.png>
 Package pdftex.def Info: Images/LC_matching-circuit.png  used on input line 523.
 (pdftex.def)             Requested size: 483.69687pt x 87.96796pt.
-
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 530.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[16 <./Images/inside-matching.png> <./Images/LC_matching-circuit.png>]
-<Images/zs-LS-matching.png, id=426, 658.46pt x 677.53125pt>
+<Images/zs-LS-matching.png, id=418, 658.46pt x 677.53125pt>
 File: Images/zs-LS-matching.png Graphic file (type png)
 <use Images/zs-LS-matching.png>
 Package pdftex.def Info: Images/zs-LS-matching.png  used on input line 539.
 (pdftex.def)             Requested size: 193.47578pt x 199.07393pt.
-<Images/zs_LS_circuit.png, id=428, 1742.51pt x 1646.15pt>
+<Images/zs_LS_circuit.png, id=420, 1742.51pt x 1646.15pt>
 File: Images/zs_LS_circuit.png Graphic file (type png)
 <use Images/zs_LS_circuit.png>
 Package pdftex.def Info: Images/zs_LS_circuit.png  used on input line 548.
@@ -1155,7 +1131,7 @@ Package pdftex.def Info: Images/zs_LS_circuit.png  used on input line 548.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 568.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 552.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1164,26 +1140,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[17 <./Images/zs-LS-matching.png> <./Images/zs_LS_circuit.png>]
-<Images/zl-LS-matching.png, id=436, 657.45625pt x 677.53125pt>
+[16 <./Images/LC_matching-circuit.png> <./Images/zs-LS-matching.png>]
+<Images/zl-LS-matching.png, id=428, 657.45625pt x 677.53125pt>
 File: Images/zl-LS-matching.png Graphic file (type png)
 <use Images/zl-LS-matching.png>
 Package pdftex.def Info: Images/zl-LS-matching.png  used on input line 572.
 (pdftex.def)             Requested size: 193.47578pt x 199.37375pt.
-<Images/zl_LS_circuit.png, id=438, 1734.48pt x 1646.15pt>
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 578.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[17 <./Images/zs_LS_circuit.png> <./Images/zl-LS-matching.png>]
+<Images/zl_LS_circuit.png, id=437, 1734.48pt x 1646.15pt>
 File: Images/zl_LS_circuit.png Graphic file (type png)
 <use Images/zl_LS_circuit.png>
 Package pdftex.def Info: Images/zl_LS_circuit.png  used on input line 581.
 (pdftex.def)             Requested size: 241.84843pt x 229.53006pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 613.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 626.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1192,11 +1178,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[18 <./Images/zl-LS-matching.png>]
+[18 <./Images/zl_LS_circuit.png>]
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 654.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 701.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1205,17 +1191,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[19 <./Images/zl_LS_circuit.png>]
-<Images/LS_matching-circuit.png, id=462, 1913.1475pt x 408.52625pt>
+[19]
+<Images/LS_matching-circuit.png, id=465, 1913.1475pt x 408.52625pt>
 File: Images/LS_matching-circuit.png Graphic file (type png)
 <use Images/LS_matching-circuit.png>
 Package pdftex.def Info: Images/LS_matching-circuit.png  used on input line 706.
 (pdftex.def)             Requested size: 483.69687pt x 103.28452pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/ConstantGainCircles.png, id=466, 473.3685pt x 487.8225pt>
+<Images/ConstantGainCircles.png, id=469, 473.3685pt x 487.8225pt>
 File: Images/ConstantGainCircles.png Graphic file (type png)
 <use Images/ConstantGainCircles.png>
 Package pdftex.def Info: Images/ConstantGainCircles.png  used on input line 716.
@@ -1233,11 +1215,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[20]
+[20 <./Images/LS_matching-circuit.png>]
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 744.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 781.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1246,8 +1228,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[21 <./Images/LS_matching-circuit.png> <./Images/ConstantGainCircles.png>]
-<Images/ConstantNoiseCircles.png, id=492, 473.3685pt x 487.8225pt>
+[21 <./Images/ConstantGainCircles.png>]
+<Images/ConstantNoiseCircles.png, id=491, 473.3685pt x 487.8225pt>
 File: Images/ConstantNoiseCircles.png Graphic file (type png)
 <use Images/ConstantNoiseCircles.png>
 Package pdftex.def Info: Images/ConstantNoiseCircles.png  used on input line 786.
@@ -1256,7 +1238,7 @@ Package pdftex.def Info: Images/ConstantNoiseCircles.png  used on input line 786
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 790.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 814.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1265,7 +1247,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[22]
+[22 <./Images/ConstantNoiseCircles.png>]
 <Images/ZsZl-noise-smithChart.png, id=505, 473.3685pt x 487.8225pt>
 File: Images/ZsZl-noise-smithChart.png Graphic file (type png)
 <use Images/ZsZl-noise-smithChart.png>
@@ -1275,7 +1257,7 @@ Package pdftex.def Info: Images/ZsZl-noise-smithChart.png  used on input line 82
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 824.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 849.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1284,17 +1266,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[23 <./Images/ConstantNoiseCircles.png>]
-<Images/LC-noise-matching-circuit.png, id=521, 1913.1475pt x 369.38pt>
+[23 <./Images/ZsZl-noise-smithChart.png>]
+<Images/LC-noise-matching-circuit.png, id=520, 1913.1475pt x 369.38pt>
 File: Images/LC-noise-matching-circuit.png Graphic file (type png)
 <use Images/LC-noise-matching-circuit.png>
 Package pdftex.def Info: Images/LC-noise-matching-circuit.png  used on input line 853.
 (pdftex.def)             Requested size: 483.69687pt x 93.38748pt.
+<Images/LS-noise-matching-circuit.png, id=528, 1913.1475pt x 408.52625pt>
+File: Images/LS-noise-matching-circuit.png Graphic file (type png)
+<use Images/LS-noise-matching-circuit.png>
+Package pdftex.def Info: Images/LS-noise-matching-circuit.png  used on input line 886.
+(pdftex.def)             Requested size: 483.69687pt x 103.28452pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 857.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 890.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1303,13 +1290,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[24 <./Images/ZsZl-noise-smithChart.png>]
-<Images/LS-noise-matching-circuit.png, id=536, 1913.1475pt x 408.52625pt>
-File: Images/LS-noise-matching-circuit.png Graphic file (type png)
-<use Images/LS-noise-matching-circuit.png>
-Package pdftex.def Info: Images/LS-noise-matching-circuit.png  used on input line 886.
-(pdftex.def)             Requested size: 483.69687pt x 103.28452pt.
-<Images/GainNoiseOptimization.png, id=538, 473.3685pt x 487.8225pt>
+[24 <./Images/LC-noise-matching-circuit.png>]
+<Images/GainNoiseOptimization.png, id=537, 473.3685pt x 487.8225pt>
 File: Images/GainNoiseOptimization.png Graphic file (type png)
 <use Images/GainNoiseOptimization.png>
 Package pdftex.def Info: Images/GainNoiseOptimization.png  used on input line 898.
@@ -1318,7 +1300,7 @@ Package pdftex.def Info: Images/GainNoiseOptimization.png  used on input line 89
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 901.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 924.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1327,21 +1309,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[25 <./Images/LC-noise-matching-circuit.png> <./Images/LS-noise-matching-circuit.png>]
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 949.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[26 <./Images/GainNoiseOptimization.png>]
-<Images/gain-noise-SC.png, id=559, 473.3685pt x 487.8225pt>
+[25 <./Images/LS-noise-matching-circuit.png> <./Images/GainNoiseOptimization.png>]
+<Images/gain-noise-SC.png, id=551, 473.3685pt x 487.8225pt>
 File: Images/gain-noise-SC.png Graphic file (type png)
 <use Images/gain-noise-SC.png>
 Package pdftex.def Info: Images/gain-noise-SC.png  used on input line 954.
@@ -1350,7 +1319,7 @@ Package pdftex.def Info: Images/gain-noise-SC.png  used on input line 954.
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 983.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 962.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1359,59 +1328,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[27 <./Images/gain-noise-SC.png>]
-<Images/gain-noise-final-circuit.png, id=573, 1913.1475pt x 369.38pt>
+[26 <./Images/gain-noise-SC.png>]
+<Images/gain-noise-final-circuit.png, id=565, 1913.1475pt x 369.38pt>
 File: Images/gain-noise-final-circuit.png Graphic file (type png)
 <use Images/gain-noise-final-circuit.png>
 Package pdftex.def Info: Images/gain-noise-final-circuit.png  used on input line 988.
 (pdftex.def)             Requested size: 483.69687pt x 93.38748pt.
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 1017.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[27 <./Images/gain-noise-final-circuit.png>]
 <Images/LS-gain-noise-matching-circuit.png, id=581, 1913.1475pt x 408.52625pt>
 File: Images/LS-gain-noise-matching-circuit.png Graphic file (type png)
 <use Images/LS-gain-noise-matching-circuit.png>
 Package pdftex.def Info: Images/LS-gain-noise-matching-circuit.png  used on input line 1022.
 (pdftex.def)             Requested size: 483.69687pt x 103.28452pt.
-)
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 189.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[28 <./Images/gain-noise-final-circuit.png>]
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 189.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[29 <./Images/LS-gain-noise-matching-circuit.png>] (./Sections/Simulation.tex
-<Images/TransistorReal.png, id=595, 841.1425pt x 749.80125pt>
+) (./Sections/Simulation.tex
+<Images/TransistorReal.png, id=583, 841.1425pt x 749.80125pt>
 File: Images/TransistorReal.png Graphic file (type png)
 <use Images/TransistorReal.png>
 Package pdftex.def Info: Images/TransistorReal.png  used on input line 11.
-(pdftex.def)             Requested size: 241.84843pt x 215.58334pt.
-<Images/SIMBiasCircuit.png, id=597, 587.19376pt x 584.1825pt>
+(pdftex.def)             Requested size: 290.22107pt x 258.70459pt.
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 15.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[28 <./Images/LS-gain-noise-matching-circuit.png>]
+<Images/SIMBiasCircuit.png, id=590, 587.19376pt x 584.1825pt>
 File: Images/SIMBiasCircuit.png Graphic file (type png)
 <use Images/SIMBiasCircuit.png>
-Package pdftex.def Info: Images/SIMBiasCircuit.png  used on input line 21.
+Package pdftex.def Info: Images/SIMBiasCircuit.png  used on input line 20.
 (pdftex.def)             Requested size: 241.84843pt x 240.60387pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 25.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 26.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1420,26 +1391,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[30 <./Images/TransistorReal.png>]
-<Images/SIMBias.png, id=605, 1517.67pt x 886.31125pt>
+[29 <./Images/TransistorReal.png> <./Images/SIMBiasCircuit.png>]
+<Images/SIMBias.png, id=598, 1924.18875pt x 893.3375pt>
 File: Images/SIMBias.png Graphic file (type png)
 <use Images/SIMBias.png>
-Package pdftex.def Info: Images/SIMBias.png  used on input line 30.
-(pdftex.def)             Requested size: 455.30452pt x 265.89542pt.
-
-
-LaTeX Warning: Reference `fig:CadenceBiasCircuit' on page 31 undefined on input line 37.
-
-<Images/CadenceBiascircuit.png, id=607, 3452.9pt x 1445.4pt>
+Package pdftex.def Info: Images/SIMBias.png  used on input line 31.
+(pdftex.def)             Requested size: 483.69687pt x 224.56062pt.
+<Images/CadenceBiascircuit.png, id=601, 3452.9pt x 1445.4pt>
 File: Images/CadenceBiascircuit.png Graphic file (type png)
 <use Images/CadenceBiascircuit.png>
-Package pdftex.def Info: Images/CadenceBiascircuit.png  used on input line 41.
-(pdftex.def)             Requested size: 345.31023pt x 144.54846pt.
+Package pdftex.def Info: Images/CadenceBiascircuit.png  used on input line 61.
+(pdftex.def)             Requested size: 483.69687pt x 202.46489pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 44.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 65.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1448,41 +1415,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[31 <./Images/SIMBiasCircuit.png> <./Images/SIMBias.png>]
-<Images/S-paramCircuit.png, id=617, 474.77374pt x 277.035pt>
+[30 <./Images/SIMBias.png>]
+<Images/S-paramCircuit.png, id=609, 474.77374pt x 277.035pt>
 File: Images/S-paramCircuit.png Graphic file (type png)
 <use Images/S-paramCircuit.png>
-Package pdftex.def Info: Images/S-paramCircuit.png  used on input line 54.
-(pdftex.def)             Requested size: 237.38629pt x 138.51715pt.
-<Images/s-param-notmatched.png, id=620, 1406.25375pt x 870.25125pt>
-File: Images/s-param-notmatched.png Graphic file (type png)
-<use Images/s-param-notmatched.png>
-Package pdftex.def Info: Images/s-param-notmatched.png  used on input line 63.
-(pdftex.def)             Requested size: 483.69687pt x 299.32076pt.
-
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 67.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[32 <./Images/CadenceBiascircuit.png> <./Images/S-paramCircuit.png>]
-<Images/SIMLCmatchingcircuit.png, id=630, 937.5025pt x 359.3425pt>
-File: Images/SIMLCmatchingcircuit.png Graphic file (type png)
-<use Images/SIMLCmatchingcircuit.png>
-Package pdftex.def Info: Images/SIMLCmatchingcircuit.png  used on input line 72.
-(pdftex.def)             Requested size: 468.7501pt x 179.6708pt.
-<Images/SIMLCmatching.png, id=633, 1496.59125pt x 882.29625pt>
-File: Images/SIMLCmatching.png Graphic file (type png)
-<use Images/SIMLCmatching.png>
-Package pdftex.def Info: Images/SIMLCmatching.png  used on input line 81.
-(pdftex.def)             Requested size: 448.98085pt x 264.69092pt.
+Package pdftex.def Info: Images/S-paramCircuit.png  used on input line 72.
+(pdftex.def)             Requested size: 241.84843pt x 141.12111pt.
+<Images/SIM-s-param-nomatch.png, id=612, 1885.0425pt x 895.345pt>
+File: Images/SIM-s-param-nomatch.png Graphic file (type png)
+<use Images/SIM-s-param-nomatch.png>
+Package pdftex.def Info: Images/SIM-s-param-nomatch.png  used on input line 81.
+(pdftex.def)             Requested size: 483.69687pt x 229.73761pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
@@ -1496,22 +1439,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[33 <./Images/s-param-notmatched.png> <./Images/SIMLCmatchingcircuit.png>]
-<Images/CadenceLCcircuit.png, id=642, 3452.9pt x 1445.4pt>
-File: Images/CadenceLCcircuit.png Graphic file (type png)
-<use Images/CadenceLCcircuit.png>
-Package pdftex.def Info: Images/CadenceLCcircuit.png  used on input line 92.
-(pdftex.def)             Requested size: 345.31023pt x 144.54846pt.
-<Images/LC_matching.png.png, id=645, 3452.9pt x 1445.4pt>
-File: Images/LC_matching.png.png Graphic file (type png)
-<use Images/LC_matching.png.png>
-Package pdftex.def Info: Images/LC_matching.png.png  used on input line 101.
+[31 <./Images/CadenceBiascircuit.png> <./Images/S-paramCircuit.png>]
+<Images/cad-s-param-no-match.png, id=620, 3452.9pt x 1445.4pt>
+File: Images/cad-s-param-no-match.png Graphic file (type png)
+<use Images/cad-s-param-no-match.png>
+Package pdftex.def Info: Images/cad-s-param-no-match.png  used on input line 89.
 (pdftex.def)             Requested size: 483.69687pt x 202.46489pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 105.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 102.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1520,22 +1458,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[34 <./Images/SIMLCmatching.png> <./Images/CadenceLCcircuit.png>]
-<Images/SIMLSmatchingcircuit.png, id=655, 965.6075pt x 255.95625pt>
-File: Images/SIMLSmatchingcircuit.png Graphic file (type png)
-<use Images/SIMLSmatchingcircuit.png>
-Package pdftex.def Info: Images/SIMLSmatchingcircuit.png  used on input line 110.
-(pdftex.def)             Requested size: 289.68448pt x 76.78746pt.
-<Images/SIMLSmatching.png, id=658, 1493.58pt x 884.30376pt>
-File: Images/SIMLSmatching.png Graphic file (type png)
-<use Images/SIMLSmatching.png>
-Package pdftex.def Info: Images/SIMLSmatching.png  used on input line 119.
-(pdftex.def)             Requested size: 448.07745pt x 265.29317pt.
+[32 <./Images/SIM-s-param-nomatch.png> <./Images/cad-s-param-no-match.png>]
+<Images/LT-LC-gain.png, id=629, 1889.0575pt x 896.34875pt>
+File: Images/LT-LC-gain.png Graphic file (type png)
+<use Images/LT-LC-gain.png>
+Package pdftex.def Info: Images/LT-LC-gain.png  used on input line 105.
+(pdftex.def)             Requested size: 483.69687pt x 229.50279pt.
+<Images/CadenceLCcircuit.png, id=631, 3452.9pt x 1445.4pt>
+File: Images/CadenceLCcircuit.png Graphic file (type png)
+<use Images/CadenceLCcircuit.png>
+Package pdftex.def Info: Images/CadenceLCcircuit.png  used on input line 115.
+(pdftex.def)             Requested size: 483.69687pt x 202.46489pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 123.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 119.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1544,26 +1482,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[35 <./Images/LC_matching.png.png> <./Images/SIMLSmatchingcircuit.png>]
-<Images/CadenceLScircuit.png, id=667, 3452.9pt x 1445.4pt>
+[33 <./Images/LT-LC-gain.png>]
+<Images/CAD-LC_matching.png, id=638, 3452.9pt x 1445.4pt>
+File: Images/CAD-LC_matching.png Graphic file (type png)
+<use Images/CAD-LC_matching.png>
+Package pdftex.def Info: Images/CAD-LC_matching.png  used on input line 123.
+(pdftex.def)             Requested size: 483.69687pt x 202.46489pt.
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 146.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[34 <./Images/CadenceLCcircuit.png> <./Images/CAD-LC_matching.png>]
+<Images/LT-LS-gain.png, id=649, 1884.03876pt x 895.345pt>
+File: Images/LT-LS-gain.png Graphic file (type png)
+<use Images/LT-LS-gain.png>
+Package pdftex.def Info: Images/LT-LS-gain.png  used on input line 154.
+(pdftex.def)             Requested size: 483.69687pt x 229.86057pt.
+<Images/CadenceLScircuit.png, id=651, 3452.9pt x 1445.4pt>
 File: Images/CadenceLScircuit.png Graphic file (type png)
 <use Images/CadenceLScircuit.png>
-Package pdftex.def Info: Images/CadenceLScircuit.png  used on input line 130.
-(pdftex.def)             Requested size: 345.31023pt x 144.54846pt.
-
-
-LaTeX Warning: Reference `fig:CadenceLS' on page 36 undefined on input line 135.
-
-<Images/noiseLC.png, id=670, 1406.25375pt x 870.25125pt>
-File: Images/noiseLC.png Graphic file (type png)
-<use Images/noiseLC.png>
-Package pdftex.def Info: Images/noiseLC.png  used on input line 150.
-(pdftex.def)             Requested size: 421.87938pt x 261.0774pt.
+Package pdftex.def Info: Images/CadenceLScircuit.png  used on input line 162.
+(pdftex.def)             Requested size: 483.69687pt x 202.46489pt.
+<Images/CAD-LinesmatchGain.png, id=653, 3452.9pt x 1445.4pt>
+File: Images/CAD-LinesmatchGain.png Graphic file (type png)
+<use Images/CAD-LinesmatchGain.png>
+Package pdftex.def Info: Images/CAD-LinesmatchGain.png  used on input line 170.
+(pdftex.def)             Requested size: 483.69687pt x 202.46489pt.
 
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 154.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 173.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1572,39 +1530,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[36 <./Images/SIMLSmatching.png> <./Images/CadenceLScircuit.png>]
-<Images/noiseLS.png, id=682, 1406.25375pt x 870.25125pt>
-File: Images/noiseLS.png Graphic file (type png)
-<use Images/noiseLS.png>
-Package pdftex.def Info: Images/noiseLS.png  used on input line 159.
-(pdftex.def)             Requested size: 421.87938pt x 261.0774pt.
-
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 168.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[37 <./Images/noiseLC.png> <./Images/noiseLS.png>]) (./Sections/Conclusion.tex
-
-File: Images/NovaFctHor.png Graphic file (type png)
-<use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 1.
-(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.10501pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.10501pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
-
-[38])
+[35 <./Images/LT-LS-gain.png> <./Images/CadenceLScircuit.png>]) (./Sections/Conclusion.tex)
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
@@ -1617,7 +1543,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[39] (./main.bbl)
+[36 <./Images/CAD-LinesmatchGain.png>] (./main.bbl)
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
@@ -1630,7 +1556,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[40]
+[37]
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
@@ -1643,34 +1569,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[41] (./main.aux)
+[38] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F0D022DB9E5D3724CDE27128172B257D;5553.
+(rerunfilecheck)             Checksum: DAAE956BAEC03A2F49898931A8DBE35C;5798.
  ) 
 Here is how much of TeX's memory you used:
- 35160 strings out of 475171
- 722212 string characters out of 5767095
- 1151247 words of memory out of 5000000
- 57383 multiletter control sequences out of 15000+600000
+ 35138 strings out of 475171
+ 721729 string characters out of 5767095
+ 1151440 words of memory out of 5000000
+ 57366 multiletter control sequences out of 15000+600000
  570650 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,17n,117p,688b,1265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,17n,117p,723b,1251s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (42 pages, 7465165 bytes).
+Output written on main.pdf (39 pages, 5903508 bytes).
 PDF statistics:
- 811 PDF objects out of 1000 (max. 8388607)
- 623 compressed objects within 7 object streams
- 175 named destinations out of 1000 (max. 500000)
- 536 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 778 PDF objects out of 1000 (max. 8388607)
+ 609 compressed objects within 7 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 460 words of extra memory for PDF output out of 10000 (max. 10000000)
 
