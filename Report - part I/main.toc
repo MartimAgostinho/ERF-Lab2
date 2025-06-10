@@ -21,6 +21,10 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Matching networks using Lumped circuit elements}{33}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Matching networks using transmission lines and stubs}{35}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Simulation for Minimum Noise Adaptation}{36}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Simulation for Noise-Gain Adaptation}{36}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Conclusion}{36}{section.4}%
-\contentsline {section}{\numberline {A}Appendix A: Python Script}{38}{appendix.A}%
+\contentsline {subsubsection}{\numberline {3.4.1}Matching networks using Lumped circuit elements}{36}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Matching networks using transmission lines and stubs}{37}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Simulation for Noise-Gain Adaptation}{38}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Matching networks using Lumped circuit elements}{38}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Matching networks using transmission lines and stubs}{38}{subsubsection.3.5.2}%
+\contentsline {section}{\numberline {4}Conclusion}{39}{section.4}%
+\contentsline {section}{\numberline {A}Appendix A: Python Script}{41}{appendix.A}%

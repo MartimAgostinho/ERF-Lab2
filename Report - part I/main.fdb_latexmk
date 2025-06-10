@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1749558904.49713 "main.aux" "main.bbl" "main" 1749558919.07348 0
+["bibtex main"] 1749560945.49533 "main.aux" "main.bbl" "main" 1749561022.7174 0
   "./references.bib" 1748869831.89532 1917 54ec68fde07c8a488dc2385b7de3881f ""
   "/usr/share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1742685315 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1749558918.61475 26344 29c3c941b32244ce50b8022f267aa4ea "pdflatex"
+  "main.aux" 1749561022.23456 28522 487be146cd53d5a0a982b8ce2c914715 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749558904.62939 "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" "main.pdf" "main" 1749558919.07389 0
+["pdflatex"] 1749561005.38827 "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" "main.pdf" "main" 1749561022.71777 0
   "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" 1749554898.13059 6626 631884b5c3d47031071f1a2cbc7d3c5c ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1742685315 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -231,7 +231,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1747345802 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1747345760 2008237 ce3832b4ed9861c2a3ede69fe218f1f9 ""
   "Images/CAD-LC_matching.png" 1748524854.94385 261557 7c85bcf10c6b15a60b0e43d2c0b3d064 ""
+  "Images/CAD-LCmatchNoise.png" 1749053090 460442 b4c8e53d11c851766ca04ec73490e7c4 ""
   "Images/CAD-LinesmatchGain.png" 1749053030 325040 7b12d6326b0660cff64a5c5d9a89af96 ""
+  "Images/CAD-LinesmatchNoise.png" 1749053150 482913 82851827ba7ccdad7c42d04ad4cc869b ""
+  "Images/CAD-LinesmatchNoiseGain.png" 1749053404 468907 e57dfe91eb01bb4d3f3c252c4d61d5ef ""
   "Images/CadenceBiascircuit.png" 1747343427.42909 138147 5a637371fc79671e4e1a959430ca2bdd ""
   "Images/CadenceLCcircuit.png" 1747343427.42909 137223 2053c49c89181678a92c3b46647d42a7 ""
   "Images/CadenceLScircuit.png" 1747343427.42909 173757 91ee85592300968e81f00995fd2bc3ed ""
@@ -278,13 +281,13 @@
   "Sections/Conclusion.tex" 1747343427.50905 342 f25edae4d677ea54c0c9d6b450bb3cfc ""
   "Sections/Design.tex" 1749558671.23397 44702 8be20c00db7c80374a7da4c77937a81e ""
   "Sections/Introduction.tex" 1747343427.50905 1034 7d191c99d2fb153344c0ecc23504a6fc ""
-  "Sections/Simulation.tex" 1749558889.48244 9668 e6b8e3331f553f8602cdba52f8564971 ""
-  "main.aux" 1749558918.61475 26344 29c3c941b32244ce50b8022f267aa4ea "pdflatex"
-  "main.bbl" 1749558904.61191 1241 5c27288bdb48a7ef5a1c0ffa7981fb48 "bibtex main"
-  "main.lof" 1749558918.62142 5800 97247a66f0e868d090ca5e4f98cfed40 "pdflatex"
-  "main.out" 1749558918.62142 5798 daae956baec03a2f49898931a8dbe35c "pdflatex"
+  "Sections/Simulation.tex" 1749561004.99165 14076 35019ca7ae754328b0e5bf9dfb61e68e ""
+  "main.aux" 1749561022.23456 28522 487be146cd53d5a0a982b8ce2c914715 "pdflatex"
+  "main.bbl" 1749560945.60309 1241 5c27288bdb48a7ef5a1c0ffa7981fb48 "bibtex main"
+  "main.lof" 1749561022.24123 6476 8b12c05c22da38418eb0bb24da0315c3 "pdflatex"
+  "main.out" 1749561022.2379 7126 cac9ee56e9cd0ab00db3ddc76f64a9c0 "pdflatex"
   "main.tex" 1749554898.13059 6626 631884b5c3d47031071f1a2cbc7d3c5c ""
-  "main.toc" 1749558918.62142 2555 aeb3eba8aa4f3ab3f80024720df164a8 "pdflatex"
+  "main.toc" 1749561022.24123 3061 c6f74b17d4206900ef703f698f7121ad "pdflatex"
   (generated)
   "main.aux"
   "main.lof"
