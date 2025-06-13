@@ -82,13 +82,13 @@ Resulting in $R_1 = \SI{4}{\kilo\ohm}$ and $R_3 = \SI{454}{\ohm}$.
 
 \subsection{S-parameters with packaging effects}
 
-The diagram of the LNA is shown in Figure \ref{fig:LNA-diagram}, where the LNA has arbitrary input and output impedances different from $50\,\si{\ohm}$ and reflection coefficients.
+The diagram of the LNA is shown in Figure \ref{fig:LNA-diagram-no-match}, where the LNA has arbitrary input and output impedances different from $50\,\si{\ohm}$ and reflection coefficients.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/LNA-diagram-no-match.png}
     \caption{LNA diagram with reflection coefficients and no matching networks.}
-    \label{fig:LNA-diagram}
+    \label{fig:LNA-diagram-no-match}
 \end{figure}
 
 With the biasing circuit designed, the next step was to simulate the S-parameters of the transistor in LTSpice.  The S-parameters were taken for a frequency range of $1\,\si{\giga\hertz}$ to $10\,\si{\giga\hertz}$, Figure \ref{fig:withoutmathing} shows the S-parameters of the transistor without any matching network.
@@ -319,8 +319,6 @@ The Smith Chart representation of the normalized impedances at the source and lo
     \label{fig:ZsZl}
 \end{figure}
 
-
-
 \subsubsection{Matching with lumped elements}
 
 The matching networks were first designed using the Smith chart, which allows for the visualization of the impedance transformation. A second analysis was done with an analytic approach using a Python script in order to have more accurate results. The input and output impedances of the LNA are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors. The values of the components are also calculated using the equations for impedance transformation. 
@@ -329,9 +327,9 @@ The matching networks were first designed using the Smith chart, which allows fo
 \textbf{Results with the Smith Chart:}
 \vspace{0.4cm}
 
-The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-LC-matching} and \ref{fig:zl-LC-matching}, where the input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors, in this case a L-section matching network.
+The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-LC-matching} and \ref{fig:zl-LC-matching}, where the input and output impedances of the transistor are transformed to $50\,\si{\ohm}$ using a combination of inductors and capacitors, in this case an L-section matching network.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{Images/zs-lc-match.png}
     \caption{Smith chart for input matching with lumped elements.}
@@ -340,14 +338,14 @@ The matching using the Smith Chart for the input and output are shown in Figures
 
 The adaptation mesh for the input was done with a shunt capacitor and a series inductor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-input}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/Input-matching-circuit.png}
     \caption{Matching circuit for input.}
     \label{fig:MatchingCircuit-input}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{Images/zl-lc-match.png}
     \caption{Smith chart for output matching with lumped elements.}
@@ -356,7 +354,7 @@ The adaptation mesh for the input was done with a shunt capacitor and a series i
 
 The adaptation mesh for the output is done with a series inductor and a shunt inductor and the equivalent circuit is shown in Figure \ref{fig:MatchingCircuit-output}. The values of the components were also calculated using the equations for impedance transformation as a form of validation.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/Ouput-matching-circuit.png}
     \caption{Matching circuit for output.}
@@ -527,8 +525,12 @@ The resulting circuit, with the final values, is shown in Figure \ref{fig:Matchi
     \label{fig:MatchingCircuit}
 \end{figure}
 
-\subsubsection{Matching lines and stubs \textcolor{red}{completar}}
-The matching networks were also designed using transmission lines and stubs, this type of adaptation allows greater frequencies (more than 1 \si{\giga \hertz}) in real conditions. The input and output impedances of the transistor were transformed to $50\,\si{\ohm}$ using a combination of transmission lines and stubs. The values of the components were also calculated using the equations for impedance transformation to validate the results.
+\subsubsection{Matching lines and stubs}
+The matching networks were also designed using transmission lines and stubs, this type of adaptation allows greater frequencies (more than 1 \si{\giga \hertz}) in real conditions. The input and output impedances of the transistor were transformed to $50\,\si{\ohm}$ using a combination of transmission lines and stubs. The values were obtain with the Smith Chart and with an analytic approach using a Python script (Appendix \ref{appendix:python_script}) that calculates the values of the components based on the input and output impedances of the transistor.
+
+\vspace{0.4cm}
+\textbf{Results with the Smith Chart:}
+\vspace{0.4cm}
 
 The matching using the Smith Chart for the input and output are shown in Figures \ref{fig:zs-line-matching} and \ref{fig:zl-line-matching}.
 
@@ -539,7 +541,31 @@ The matching using the Smith Chart for the input and output are shown in Figures
     \label{fig:zs-line-matching}
 \end{figure}
 
-The adaptation mesh for the input was done with an open circuit shunt stub and a series line. 
+The adaptation mesh for the input was done with an open circuit shunt stub and a series line, as shown in Figure \ref{fig:zs_LS_circuit}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/zs_LS_circuit.png}
+    \caption{Matching circuit for input with lines and stubs}
+    \label{fig:zs_LS_circuit}
+\end{figure}
+
+The values obtain from the Smith Chart for the input matching network are shown in Table \ref{tab:MatchingValuesLinesin}.
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks using the Smith Chart with lines and stubs.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $l$     & $0,182\lambda$ \\
+        \midrule
+        $d$   & $0,007\lambda$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValuesLinesin}
+\end{table}
 
 \begin{figure}[H]
     \centering
@@ -548,20 +574,143 @@ The adaptation mesh for the input was done with an open circuit shunt stub and a
     \label{fig:zl-line-matching}
 \end{figure}
 
-The adaptation mesh for the output is done with a series line and an open circuit shunt stub.
+The adaptation mesh for the output is done with a series line and an open circuit shunt stub as shown in Figure \ref{fig:zl_LS_circuit}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/zl_LS_circuit.png}
+    \caption{Matching circuit for output with lines and stubs}
+    \label{fig:zl_LS_circuit}
+\end{figure}
+
+The values obtain from the Smith Chart for the output matching network are shown in Table \ref{tab:MatchingValuesLinesout}.
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks using the Smith Chart with lines and stubs.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $l$     & $0,169\lambda$ \\
+        \midrule
+        $d$   & $0,227\lambda$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValuesLinesout}
+\end{table}
+
+\vspace{0.4cm}
+\textbf{Results with analytic approach:}
+\vspace{0.4cm}
+
+The expressions used in the Python script to calculate the values of the components are the following \textsuperscript{\cite{Pozar}}:
+
+Considering an impedance $Z$:
+
+\begin{equation}
+    Y = G + jB = \frac{1}{Z}
+\end{equation}
+
+Where $G$ is the conductance and $B$ is the susceptance and can be calculated as:
+
+\begin{equation}
+    G = \frac{R_l(1+t^2)}{R_L^2 + (X_L +Z_0t)^2}
+\end{equation}
+
+\begin{equation}
+    B = -\frac{R_l^2t-(Z_0-X_Lt)(X_L+Z_0t)}{Z_0[R_L^2 + (X_L +Z_0t)^2]}
+\end{equation}
+
+Where $R_l$ is the real part of the impedance, $X_l$ is the imaginary part of the impedance, $Z_0$ is the characteristic impedance of the line and $t$ is the length of the line in wavelengths.
+
+If $R_L$ is different from $Z_0$, the equation for t can be expressed as:
+
+\begin{equation}
+    t = \frac{X_L \pm \sqrt{R_L[(Z_0-R_L)^2+X_L^2]/Z_0}}{R_L-Z_0}
+\end{equation}
+
+If $R_L = Z_0$, the equation for $t$ can be expressed as:
+\begin{equation}
+    t = \frac{-X_L}{2Z_0}
+\end{equation}
+
+Thus, the solutions for the line lengths $d$ normalized to the wavelength are:
+
+\begin{equation}
+    \frac{d}{\lambda} =
+    \begin{cases}
+        \frac{1}{2\pi}\tan^{-1} t \quad \text{for } t \geq 0 \\
+        \frac{1}{2\pi}\left(\pi + \tan^{-1} t\right) \quad \text{for } t < 0
+    \end{cases}
+    \label{eq:dlength}
+\end{equation}
+
+Now to find the open-circuited stub length $l$ normalized to the wavelength, the following equations are used:
+
+\begin{equation}
+    \frac{l}{\lambda} = \frac{-1}{2\pi}tan^{-1}\frac{B}{Y_0}
+    \label{eq:llength}
+\end{equation}
+
+To calculate the wavelength $\lambda$ in the line, the following equation is used:
+\begin{equation}
+    \lambda = \frac{v}{f}
+\end{equation}
+
+And the velocity $v$ in the line is given by:
+
+\begin{equation}
+    v = \frac{c}{\sqrt{\epsilon_{eff}}}
+\end{equation}
+
+The effective permittivity $\epsilon_{eff}$ is calculated as:
+
+\begin{equation}
+    \epsilon_{eff} = \frac{\epsilon_r + 1}{2} + \frac{\epsilon_r - 1}{2}\left(1+\frac{12h}{w}\right)^{-0.5}
+\end{equation}
+where $w = 1,5 \si{\milli \meter}$ and $h = 800 \si{\micro \meter}$ that correspond to the characteristics of the microstrip line used in the design.
+
+
+The results obtain from the analytic approach are shown in Table \ref{tab:MatchingValuesLines}. It is possible to observe that the values of the components are very similar to the ones obtained from the Smith Chart, with a difference of less than $5\%$ in all cases. This validates the results obtained from the Smith Chart.
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks using the analytic approach with lines and stubs.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $v$     & $171739780,4465274\,\si{\meter \per \second}$ \\
+        \midrule
+        $\epsilon_{eff}$     & $3,051410966570356$ \\
+        \midrule
+        $\lambda$     & $42,90158139038047\,\si{\milli\meter}$ \\
+        \midrule
+        $l_{in}$     & $8,0649\,\si{\milli\meter}$ \\
+        \midrule
+        $d_{in}$   & $157,9\,\si{\micro\meter}$ \\
+        \midrule
+        $l_{out}$     & $7,3823\,\si{\milli\meter}$\\
+        \midrule
+        $d_{out}$   & $9,6999\,\si{\milli\meter}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValuesLines}
+\end{table}
 
 The final circuit is shown in Figure \ref{fig:MatchingCircuit-line}, where the input and output matching networks are designed using a combination of transmission lines and stubs.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{Images/LS_matching-circuit.png}
-    \caption{Matching circuit for input and output with values}
+    \caption{Matching circuit for input and output with values.}
     \label{fig:MatchingCircuit-line}
 \end{figure}
 
 \subsubsection{Constant Gain circles}
 
-A Python script (Appendix \ref{appendix:python_script}) was made, in line with \cite{Gillermo-Gonzalez}, to calculate the constant gain circles for the input and output matching networks and plot it in the Smith Chart, which are shown in Figure \ref{fig:ConstantGainCircles}. The constant gain circles are used to visualize the gain of the LNA for different source and load impedances. For maximum gain, the source and load impedances should be located on the crosses that represent the maximum gain circles.
+A Python script (Appendix \ref{appendix:python_script}) was made, in line with \cite{Gillermo-Gonzalez}, to calculate the constant gain circles for the input and output matching networks and plot it in the Smith Chart, which are shown in Figure \ref{fig:ConstantGainCircles}. The constant gain circles are used to visualize the gain of the LNA for different source and load impedances. For maximum gain, the source and load impedances should be located on the crosses that represent the maximum gain circles, in this case represent $26,1$ in linear scale or $14,17 \si{\decibel}$.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{Images/ConstantGainCircles.png}
@@ -630,7 +779,7 @@ The following noise parameters where obtain in cadence from the transistor model
     \label{tab:NoiseParameters}
 \end{table}
 
-Once again a Python script (Appendix \ref{appendix:python_script}) was made to calculate and plot the constant input noise figure circles in the Smith Chart, which are shown in Figure \ref{fig:ConstantNoiseCircles}. The constant noise figure circles are used to visualize the noise figure of the LNA for different source and load impedances. For minimum noise, the source and load impedances should be located on the points that represent the minimum noise figure circles.
+Once again a Python script (Appendix \ref{appendix:python_script}) was made to calculate and plot the constant input noise figure circles in the Smith Chart, which are shown in Figure \ref{fig:ConstantNoiseCircles}. The constant noise figure circles are used to visualize the noise figure of the LNA for different source and load impedances. For minimum noise, the source and load impedances should be located on the points that represent the minimum noise figure circles,in this case the crosses, that reoresent $2,2 \si{\decibel}$ corresponding to the minimum noise figure of the transistor.
 
 \begin{figure}[H]
     \centering
@@ -706,7 +855,39 @@ In Figure \ref{fig:MatchingCircuit-noise} the final circuit with the values of t
     \label{fig:MatchingCircuit-noise}
 \end{figure}
 
-\subsubsection{Matching lines and stubs for minimum noise \textcolor{red}{completar}}
+\subsubsection{Matching lines and stubs for minimum noise}
+
+Using the same matching circuits as in the previous sections, depicted in Figures \ref{fig:zs_LS_circuit} and \ref{fig:zl_LS_circuit}, the values of the components were calculated using the Equations \ref{eq:dlength} to \ref{eq:llength} in the Python script (Appendix \ref{appendix:python_script}).
+
+The results of the matching networks for minimum noise using the analytic approach are shown in Table \ref{tab:MatchingValuesLines-noise}.
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks for minimum noise using the analytic approach with lines and stubs.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $l_{in}$     & $3,21\,\si{\milli\meter}$ \\
+        \midrule
+        $d_{in}$   & $2,13\,\si{\milli\meter}$ \\
+        \midrule
+        $l_{out}$     & $3,87\,\si{\milli\meter}$\\
+        \midrule
+        $d_{out}$   & $2,47\,\si{\milli\meter}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValuesLines-noise}
+\end{table}
+
+The final circuit with the values of the components for minimum noise is shown in Figure \ref{fig:MatchingCircuit-line-noise}, where the input and output matching networks are designed using a combination of transmission lines and stubs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/LS-noise-matching-circuit.png}
+    \caption{Matching circuit for input and output with values for minimum noise.}
+    \label{fig:MatchingCircuit-line-noise}
+\end{figure}
+
 
 \subsection{Gain-Noise Optimization}
 
@@ -743,7 +924,7 @@ In table \ref{tab:GainNoiseOptimization} the values of the intersection points o
 
 For the following calculations $\Gamma_s = \Gamma_{A1}$ and $z_{A1} = z_s$ will be used.
 
-Once agian in order do obtain a bilateral matching network, the output reflection coefficient has to be calculated with the equation  \ref{eq:GammaL-noise}. Withthe reflection coefficient value, it is possible to obtain the normalized impedance at the load using the equation \ref{eq:Zl}.
+Once again in order do obtain a bilateral matching network, the output reflection coefficient has to be calculated with the equation  \ref{eq:GammaL-noise}. Withthe reflection coefficient value, it is possible to obtain the normalized impedance at the load using the equation \ref{eq:Zl}.
 
 In table \ref{gain-noise-impedances} the normalized impedances at the source and load and the reflection coefficients for gain-noise optimization are shown.
 
@@ -809,4 +990,36 @@ In Figure \ref{fig:MatchingCircuit-gain-noise} the final circuit with the values
     \label{fig:MatchingCircuit-gain-noise}
 \end{figure}
 
-\subsubsection{Matching lines and stubs for gain-noise optimization \textcolor{red}{completar}}
+\subsubsection{Matching lines and stubs for gain-noise optimization}
+
+Once again were used the same matching circuits as in the previous sections, depicted in Figures \ref{fig:zs_LS_circuit} and \ref{fig:zl_LS_circuit}, the values of the components were calculated using the Equations \ref{eq:dlength} to \ref{eq:llength} in the Python script (Appendix \ref{appendix:python_script}).
+
+The results of the matching networks for gain-noise optimization using the analytic approach are shown in Table \ref{tab:MatchingValuesLines-gain-noise}.
+
+\begin{table}[H]
+    \centering
+    \caption{Values of the components for the matching networks for gain-noise optimization using the analytic approach with lines and stubs.}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        $l_{in}$     & $4,299\,\si{\milli\meter}$ \\
+        \midrule
+        $d_{in}$   & $2,605\,\si{\milli\meter}$ \\
+        \midrule
+        $l_{out}$     & $4,462\,\si{\milli\meter}$\\
+        \midrule
+        $d_{out}$   & $10,511\,\si{\milli\meter}$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:MatchingValuesLines-gain-noise}
+\end{table}
+
+The final circuit with the values of the components for gain-noise optimization is shown in Figure \ref{fig:MatchingCircuit-line-gain-noise}, where the input and output matching networks are designed using a combination of transmission lines and stubs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/LS-gain-noise-matching-circuit.png}
+    \caption{Matching circuit for input and output with values for gain-noise optimization.}
+    \label{fig:MatchingCircuit-line-gain-noise}
+\end{figure}
