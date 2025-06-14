@@ -1,0 +1,7 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Design of the LNA}{3}{section.2}%
+\contentsline {section}{\numberline {3}Simulation and Results analysis}{3}{section.3}%
+\contentsline {section}{\numberline {4}Final Circuit}{3}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{3}{section.5}%
+\contentsline {section}{\numberline {A}Appendix A: Python Script}{5}{appendix.A}%

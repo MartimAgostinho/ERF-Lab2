@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1749564944.77002 "main.aux" "main.bbl" "main" 1749565378.65706 0
+["bibtex main"] 1749735709.27116 "main.aux" "main.bbl" "main" 1749736104.39106 0
   "./references.bib" 1748869831.89532 1917 54ec68fde07c8a488dc2385b7de3881f ""
   "/usr/share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1742685315 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1749565378.18707 30546 b580927cf0bcc9a442b07a1695edc977 "pdflatex"
+  "main.aux" 1749736104.09943 30783 dd67f5b1400181294bf574bd636fbfce "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749565358.7865 "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" "main.pdf" "main" 1749565378.65743 0
-  "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" 1749565357.97423 6924 0b5f0dab4cf7d475d442b7f5d502d09f ""
+["pdflatex"] 1749736093.56313 "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" "main.pdf" "main" 1749736104.39131 0
+  "/home/sofia/Documents/uni/ERF-Lab2/Report - part I/main.tex" 1749565390.24677 6924 0b5f0dab4cf7d475d442b7f5d502d09f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1742685315 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1742685315 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -282,14 +282,14 @@
   "Sections/Conclusion.tex" 1749565243.56369 1359 aeb85a74e62ee8c52f1016a474e4d36a ""
   "Sections/Design.tex" 1749558671.23397 44702 8be20c00db7c80374a7da4c77937a81e ""
   "Sections/FinalCircuit.tex" 1749564996.0997 1994 8db97669fe70d7802cdb395a41ca07b2 ""
-  "Sections/Introduction.tex" 1747343427.50905 1034 7d191c99d2fb153344c0ecc23504a6fc ""
+  "Sections/Introduction.tex" 1749736093.07652 2475 ccbbd1eed537bb35a029fc55c333cf01 ""
   "Sections/Simulation.tex" 1749565035.67541 16138 60ccd9ed526af1036d04e9fda0eb4752 ""
-  "main.aux" 1749565378.18707 30546 b580927cf0bcc9a442b07a1695edc977 "pdflatex"
-  "main.bbl" 1749564944.8776 1241 5c27288bdb48a7ef5a1c0ffa7981fb48 "bibtex main"
-  "main.lof" 1749565378.19373 6614 6ac7e1c0dd14db6ecf98c758a31df366 "pdflatex"
-  "main.out" 1749565378.19373 7352 b91b562aea8181be673a91c81663a294 "pdflatex"
-  "main.tex" 1749565357.97423 6924 0b5f0dab4cf7d475d442b7f5d502d09f ""
-  "main.toc" 1749565378.19373 3152 7ed1791d2ccb03b64182e1b4ccaf8faf "pdflatex"
+  "main.aux" 1749736104.09943 30783 dd67f5b1400181294bf574bd636fbfce "pdflatex"
+  "main.bbl" 1749735709.32777 1241 5c27288bdb48a7ef5a1c0ffa7981fb48 "bibtex main"
+  "main.lof" 1749736104.10277 6615 62374fa96944a8d801eccb8aab937519 "pdflatex"
+  "main.out" 1749736104.10277 7568 2e2d095108cb8ec8c878d032e8650a9a "pdflatex"
+  "main.tex" 1749565390.24677 6924 0b5f0dab4cf7d475d442b7f5d502d09f ""
+  "main.toc" 1749736104.10277 3304 1ab805be21a7db3f5469616dbde3f6ea "pdflatex"
   (generated)
   "main.aux"
   "main.lof"
