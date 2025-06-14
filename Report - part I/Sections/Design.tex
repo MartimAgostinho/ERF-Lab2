@@ -790,7 +790,7 @@ Once again a Python script (Appendix \ref{appendix:python_script}) was made to c
 
 In order to do the impedance matching for minimum noise, the output reflection coefficient has to be calculated with the following equation \textsuperscript{\cite{Slides}}:
 \begin{equation}
-    \Gamma_{L} = (\frac{s_{22}+(s_{12}s_{21}\Gamma_s)}{1-s_{11}\Gamma_s})^*
+    \Gamma_{L} = \left(\frac{s_{22}+(s_{12}s_{21}\Gamma_s)}{1-s_{11}\Gamma_s}\right)^*
     \label{eq:GammaL-noise}
 \end{equation}
 
@@ -807,7 +807,7 @@ In table \ref{tab: noise-impedances} the normalized impedances at the source and
         \midrule
         $z_{S}$     & $0.652838-0.2203652j$ \si{\ohm} \\
         \midrule
-        $z_{L}$     & $1.07281071+0.65421904j$\si{\ohm}\\
+        $z_{L}$     & $1.07281071+0.65421904j$ \si{\ohm}\\
         \bottomrule
     \end{tabularx}
     \label{tab: noise-impedances}
@@ -916,7 +916,7 @@ In table \ref{tab:GainNoiseOptimization} the values of the intersection points o
         \midrule
         $z_{A1}$     & $0.51000409-0.17495104j$ \si{\ohm} \\
         \midrule
-        $z_{A2}$     & $0.56016594-0.34723135j$\si{\ohm}\\
+        $z_{A2}$     & $0.56016594-0.34723135j$ \si{\ohm}\\
         \bottomrule
     \end{tabularx}
     \label{tab:GainNoiseOptimization}
