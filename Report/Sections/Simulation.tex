@@ -93,7 +93,7 @@ The same simulation was done in Cadence, and the results can be seen in Figure \
 
 \subsection{Simulation for Maximum Gain Adaptation}
 
-After assuming a working frequency of $4 GHz$ at the previous section, the resulting matching networks for maximum gain were simulated, first in LTSpice and then in Cadence, in order to validate the results obtained.
+After assuming a working frequency of $\SI{4}{\giga\hertz}$ at the previous section, the resulting matching networks for maximum gain were simulated, first in LTSpice and then in Cadence, in order to validate the results obtained.
 
 \subsubsection{Matching networks using Lumped circuit elements}
 
@@ -107,7 +107,7 @@ First, the simulation was done in LTSpice and the results can be seen in Figure 
     \label{fig:SIMLCMatchingCircuit}
 \end{figure}
 
-After looking at the graphic above, it is possible to conclude that this matching network is working properly, since there is a sharp drop in both $S11$ and $S22$ at the desired frequency of $4GHz$ as well as a high point in the $S21$ curve that is the maximum gain of the circuit, which is around $14 dB$ as expected.
+After looking at the graphic above, it is possible to conclude that this matching network is working properly, since there is a sharp drop in both $S11$ and $S22$ at the desired frequency of $\SI{4}{\giga\hertz}$ as well as a high point in the $S21$ curve that is the maximum gain of the circuit, which is around $\SI{14}{\decibel}$ as expected.
 
 For more accurate results, the same circuit was simulated in Cadence, and the schematic can be seen in Figure \ref{fig:CadenceLCMatchingCircuit}.
 \begin{figure}[H]
@@ -134,15 +134,15 @@ In table \ref{tab:LCMatchingParameters} the results of the matching networks usi
         \toprule
         \textbf{Parameter} & \textbf{Value} \\
         \midrule
-        LTSpice $S21$  & $14.18 \si{\decibel}$ \\
+        LTSpice $S21$  & $\SI{14.18}{\decibel}$ \\
         \midrule
-        Cadence $S21$ & $14.06 \si{\decibel}$ \\
+        Cadence $S21$ & $\SI{14.06}{\decibel}$ \\
         \bottomrule
     \end{tabularx}
     \label{tab:LCMatchingParameters}
 \end{table}
 
-Observing the results, it is possible to conclude that the matching networks using lumped circuit elements are working properly, since the $S21$ parameter is around $14 dB$ in both LTSpice and Cadence, which is close to the expected value of $14,17 dB$ calculated in the previous section.
+Observing the results, it is possible to conclude that the matching networks using lumped circuit elements are working properly, since the $S21$ parameter is around $\SI{14}{\decibel}$ in both LTSpice and Cadence, which is close to the expected value of $\SI{14.17}{\decibel}$ calculated in the previous section.
 
 \subsubsection{Matching networks using transmission lines and stubs}
 
@@ -182,9 +182,9 @@ The summarized results of the matching networks using transmission lines and stu
         \toprule
         \textbf{Parameter} & \textbf{Value} \\
         \midrule
-        LTSpice $S21$  & $14.18 \si{\decibel}$ \\
+        LTSpice $S21$  & $\SI{14.18}{\decibel}$ \\
         \midrule
-        Cadence $S21$ & $14.05 \si{\decibel}$ \\
+        Cadence $S21$ & $\SI{14.05}{\decibel}$ \\
         \bottomrule
     \end{tabularx}
     \label{tab:LSMatchingParameters}
@@ -242,9 +242,9 @@ In table \ref{tab:NoiseMatchingParameters} the summarized results of the matchin
         \toprule
         \textbf{Parameter} & \textbf{Value} \\
         \midrule
-        Theoretical Noise Factor  & $2.17 \si{\decibel}$ \\
+        Theoretical Noise Factor  & $\SI{2.17}{\decibel}$ \\
         \midrule
-        Cadence Noise Factor & $2.17 \si{\decibel}$ \\
+        Cadence Noise Factor & $\SI{2.17}{\decibel}$ \\
         \bottomrule
     \end{tabularx}
     \label{tab:NoiseMatchingParameters}
@@ -307,13 +307,13 @@ In table \ref{tab:NoiseGainMatchingParametersLine} the summarized results of the
         \toprule
         \textbf{Parameter} & \textbf{Value} \\
         \midrule
-        Theoretical Noise Factor  & $3 \si{\decibel}$ \\
+        Theoretical Noise Factor  & $\SI{3}{\decibel}$ \\
         \midrule
-        Cadence Noise Factor & $2.2 \si{\decibel}$ \\
+        Cadence Noise Factor & $\SI{2.2}{\decibel}$ \\
         \midrule
-        Theoretical Gain & $13.22 \si{\decibel}$ \\
+        Theoretical Gain & $\SI{13.22}{\decibel}$ \\
         \midrule
-        Cadence Gain & $13.04 \si{\decibel}$ \\
+        Cadence Gain & $\SI{13.04}{\decibel}$ \\
         \bottomrule
     \end{tabularx}
     \label{tab:NoiseGainMatchingParametersLine}
