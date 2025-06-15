@@ -21,7 +21,7 @@ In the previous section were obtained the theoretical values for the LNA design,
         \midrule
 
         \multirow{1}{*}{350nm}
-        & \multirow{1}{*}{$L$}  & 1:1 & xxx & xxx  & xxx & xxx & xxx  \\
+        & \multirow{1}{*}{$L$}  & 1:1 & $205\mu m$ & $350 nm$  & $17.4$ & $310$ & $1500$  \\
 
         \midrule
         \multirow{1}{*}{65nm}
@@ -38,6 +38,8 @@ In the previous section were obtained the theoretical values for the LNA design,
 \end{table}
 
 \textcolor{red}{Dizer o que se mudou e o efeito das mudanças}
+
+For the $350nm$ case, the value of W, and consequently, the value of $g_m$ were changed to guarantee the correct input impedance value. The value of the resistor was also modified to minimize the Noise Figure of the LNA for this configuration.
 
 \begin{table}[H]
     \centering
@@ -56,8 +58,8 @@ In the previous section were obtained the theoretical values for the LNA design,
         \midrule
 
         \multirow{2}{*}{350nm}
-        & \multirow{2}{*}{$L$}  & 1:1 & xxx & xxx  & xxx & xxx & xxx  \\
-        &   & 1:n & xxx & xxx  & xxx & xxx & xxx  \\
+        & \multirow{2}{*}{$L$}  & 1:1 & $220\mu m$ & $350nm$  & $22.7$ & $130$ & $750$  \\
+        &   & 1:n & $510\mu m$ & $350nm$  & $52.7$ & $70$ & $750$  \\
 
         \midrule
         \multirow{2}{*}{65nm}
@@ -76,3 +78,5 @@ In the previous section were obtained the theoretical values for the LNA design,
 \end{table}
 
 \textcolor{red}{Dizer o que se mudou e o efeito das mudanças}
+
+For the $350nm$ case, in the $1:1$ factor, the value of W was increased to maintain the gain at a value near $10dB$, increasing also the $g_m$ value, since this has lower than expected. The final Resistor value was greatly reduced because this changed drop the value of the Noise Figure, without having much influence in the final gain, and this small influence is also countered by increasing the value of the W mentioned before. In the $1:n$ factor, the value of W is lower than supposed, but this change is necessary to maintain the correct value of $n \cdot g_{mCG}$. The value of the Resistor is adjusted to maintain the correct gain value.
