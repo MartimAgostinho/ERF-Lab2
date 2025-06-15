@@ -5,8 +5,8 @@
 \contentsline {section}{\numberline {2}LNA Architecture}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Common Gate and Common Source combination gain stages}{4}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Common Gate Stage}{5}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Common Source Stage}{6}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Buffer Stage}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2}Common Source Stage}{5}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Buffer Stage}{6}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Design of the LNA}{8}{section.3}%
 \contentsline {section}{\numberline {4}Simulation and Results analysis}{8}{section.4}%
 \contentsline {section}{\numberline {5}Final Circuit}{8}{section.5}%

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1749971068.32559 "main.aux" "main.bbl" "main" 1749971070.29948 0
+["bibtex main"] 1749971168.23097 "main.aux" "main.bbl" "main" 1749971170.17818 0
   "./references.bib" 1749964848.39637 2691 4e1c955032cdf3931c8886c17fc90815 ""
   "/usr/share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1742685315 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1749971070.08024 3931 9dfd6c41cd3fcb3c1bc40c7a347a19bd "pdflatex"
+  "main.aux" 1749971169.9631 3931 f3a9da9caa45c707a6879c8273a2bc93 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749971068.3966 "/home/sofia/Documents/uni/ERF-Lab2/Report - part II/main.tex" "main.pdf" "main" 1749971070.29978 0
+["pdflatex"] 1749971168.30219 "/home/sofia/Documents/uni/ERF-Lab2/Report - part II/main.tex" "main.pdf" "main" 1749971170.17836 0
   "/home/sofia/Documents/uni/ERF-Lab2/Report - part II/main.tex" 1749970548.42863 6971 f378ec61beb25ecd59269629c3dac3a7 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
@@ -227,18 +227,18 @@
   "Images/schem-CS.png" 1749966159.66777 18491 70fbcf051ffd7d3f86380595d9aadcc0 ""
   "Images/schem-GainStages.png" 1749966238.42564 33949 0f8a0092698f959c1b8008aa730586b5 ""
   "Images/schem-LNA.png" 1749970841.61201 22734 ed0098114469334f6af7f705bab95614 ""
-  "Sections/Architecture.tex" 1749970949.54142 6613 9ef0943e19010f8ec398cb3904da471b ""
+  "Sections/Architecture.tex" 1749971162.86671 6613 c470a46d828fc82a7c458a5df110712c ""
   "Sections/Conclusion.tex" 1749734975.29597 22 d7b6d94cf8c9dfe4c4467258928348ee ""
   "Sections/Design.tex" 1749971064.2438 224 6287ea1031ad464583c04d239375f79f ""
   "Sections/FinalCircuit.tex" 1749734930.6511 25 dd2233ee735aa321d9c8bc06201ab017 ""
   "Sections/Introduction.tex" 1749965637.59295 2080 4cec0a9bb25a5fb0f6088ed32c92e088 ""
   "Sections/Simulation.tex" 1749734915.58172 43 cb882aea0d1194ef4d64d864d5c778b8 ""
-  "main.aux" 1749971070.08024 3931 9dfd6c41cd3fcb3c1bc40c7a347a19bd "pdflatex"
-  "main.bbl" 1749971068.38698 1399 58913b6d927f4a6a1136ea34fb74ea38 "bibtex main"
-  "main.lof" 1749971070.08024 746 261aa9c68d48376aaba8af9dba403b34 "pdflatex"
-  "main.out" 1749971070.08024 1962 74e62768fd33da80d3335585422cf9df "pdflatex"
+  "main.aux" 1749971169.9631 3931 f3a9da9caa45c707a6879c8273a2bc93 "pdflatex"
+  "main.bbl" 1749971168.28983 1399 58913b6d927f4a6a1136ea34fb74ea38 "bibtex main"
+  "main.lof" 1749971169.9631 746 2fb8184dd8e3e38233ee0337f393bef3 "pdflatex"
+  "main.out" 1749971169.9631 1962 74e62768fd33da80d3335585422cf9df "pdflatex"
   "main.tex" 1749970548.42863 6971 f378ec61beb25ecd59269629c3dac3a7 ""
-  "main.toc" 1749971070.08024 1085 62089c42b4206f42fc6d4bb1c24a6395 "pdflatex"
+  "main.toc" 1749971169.9631 1085 5ce3419f5d1b9d0606bcb73d842df8d8 "pdflatex"
   (generated)
   "main.aux"
   "main.lof"

@@ -446,10 +446,6 @@ INPUT ./Images/schem-CG.png
 INPUT Images/schem-CG.png
 INPUT ./Images/schem-CG.png
 INPUT ./Images/schem-CG.png
-INPUT ./Images/NovaFctHor.png
-INPUT ./Images/NovaFctHor.png
-INPUT Images/NovaFctHor.png
-INPUT ./Images/NovaFctHor.png
 INPUT ./Images/schem-CS.png
 INPUT ./Images/schem-CS.png
 INPUT Images/schem-CS.png
@@ -472,6 +468,10 @@ INPUT ./Sections/Design.tex
 INPUT Sections/Design.tex
 INPUT ./Sections/Design.tex
 INPUT Sections/Design.tex
+INPUT ./Images/NovaFctHor.png
+INPUT ./Images/NovaFctHor.png
+INPUT ./Images/NovaFctHor.png
+INPUT ./Images/NovaFctHor.png
 INPUT ./Sections/Simulation.tex
 INPUT Sections/Simulation.tex
 INPUT ./Sections/Simulation.tex
