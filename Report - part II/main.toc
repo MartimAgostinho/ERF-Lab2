@@ -1,7 +1,14 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {section}{\numberline {2}Design of the LNA}{3}{section.2}%
-\contentsline {section}{\numberline {3}Simulation and Results analysis}{3}{section.3}%
-\contentsline {section}{\numberline {4}Final Circuit}{3}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{3}{section.5}%
-\contentsline {section}{\numberline {A}Appendix A: Python Script}{5}{appendix.A}%
+\contentsline {subsection}{\numberline {1.1}Objectives}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Motivation}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}LNA Architecture}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Common Gate and Common Source combination gain stages}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Common Gate Stage}{5}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Common Source Stage}{6}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Buffer Stage}{7}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Design of the LNA}{8}{section.3}%
+\contentsline {section}{\numberline {4}Simulation and Results analysis}{8}{section.4}%
+\contentsline {section}{\numberline {5}Final Circuit}{8}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}%
+\contentsline {section}{\numberline {A}Appendix A: Python Script}{10}{appendix.A}%

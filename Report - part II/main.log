@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.5.15)  12 JUN 2025 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.5.15)  15 JUN 2025 08:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -794,7 +794,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 116.
 \c@lstlisting=\count371
-<Images/NovaFctVer.png, id=33, 1927.2pt x 1084.05pt>
+<Images/NovaFctVer.png, id=61, 1927.2pt x 1084.05pt>
 File: Images/NovaFctVer.png Graphic file (type png)
 <use Images/NovaFctVer.png>
 Package pdftex.def Info: Images/NovaFctVer.png  used on input line 125.
@@ -816,7 +816,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-<Images/NovaFctHor.png, id=56, 225.4824pt x 52.5162pt>
+<Images/NovaFctHor.png, id=91, 225.4824pt x 52.5162pt>
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
 Package pdftex.def Info: Images/NovaFctHor.png  used on input line 178.
@@ -845,11 +845,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[2] (./Sections/Introduction.tex) (./Sections/Design.tex) (./Sections/Simulation.tex) (./Sections/FinalCircuit.tex) (./Sections/Conclusion.tex)
+[2] (./Sections/Introduction.tex) (./Sections/Architecture.tex
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 195.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 1.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -858,15 +858,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[3] (./main.bbl
+[3]
+<Images/schem-LNA.png, id=121, 1912.14375pt x 706.64pt>
+File: Images/schem-LNA.png Graphic file (type png)
+<use Images/schem-LNA.png>
+Package pdftex.def Info: Images/schem-LNA.png  used on input line 7.
+(pdftex.def)             Requested size: 435.32422pt x 160.87407pt.
+<Images/schem-GainStages.png, id=124, 1216.545pt x 875.27pt>
+File: Images/schem-GainStages.png Graphic file (type png)
+<use Images/schem-GainStages.png>
+Package pdftex.def Info: Images/schem-GainStages.png  used on input line 18.
+(pdftex.def)             Requested size: 386.95897pt x 278.39597pt.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 23.
-
-)
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 198.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 22.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -875,11 +882,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[4]
+[4 <./Images/schem-LNA.png>]
+<Images/schem-CG.png, id=133, 607.26875pt x 840.13875pt>
+File: Images/schem-CG.png Graphic file (type png)
+<use Images/schem-CG.png>
+Package pdftex.def Info: Images/schem-CG.png  used on input line 33.
+(pdftex.def)             Requested size: 145.11053pt x 200.75287pt.
+
 
 File: Images/NovaFctHor.png Graphic file (type png)
 <use Images/NovaFctHor.png>
-Package pdftex.def Info: Images/NovaFctHor.png  used on input line 207.
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 37.
 (pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -888,27 +901,104 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
 
-[5] (./main.aux)
+[5 <./Images/schem-GainStages.png>]
+<Images/schem-CS.png, id=140, 507.8975pt x 869.2475pt>
+File: Images/schem-CS.png Graphic file (type png)
+<use Images/schem-CS.png>
+Package pdftex.def Info: Images/schem-CS.png  used on input line 44.
+(pdftex.def)             Requested size: 145.11053pt x 248.34824pt.
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 50.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[6 <./Images/schem-CG.png> <./Images/schem-CS.png>]
+<Images/schem-Buffer.png, id=149, 1281.78876pt x 875.27pt>
+File: Images/schem-Buffer.png Graphic file (type png)
+<use Images/schem-Buffer.png>
+Package pdftex.def Info: Images/schem-Buffer.png  used on input line 59.
+(pdftex.def)             Requested size: 386.95897pt x 264.22575pt.
+
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 67.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[7 <./Images/schem-Buffer.png>]) (./Sections/Design.tex) (./Sections/Simulation.tex) (./Sections/FinalCircuit.tex) (./Sections/Conclusion.tex)
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 196.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[8] (./main.bbl)
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 199.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[9]
+
+File: Images/NovaFctHor.png Graphic file (type png)
+<use Images/NovaFctHor.png>
+Package pdftex.def Info: Images/NovaFctHor.png  used on input line 208.
+(pdftex.def)             Requested size: 67.64523pt x 15.75497pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.10501pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.10501pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.10501pt}.
+
+[10] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6E0A5BFCA593E75F1DD2B338B2EBDE75;829.
+(rerunfilecheck)             Checksum: 74E62768FD33DA80D3335585422CF9DF;1962.
  ) 
 Here is how much of TeX's memory you used:
- 34462 strings out of 475171
- 705600 string characters out of 5767095
- 1128700 words of memory out of 5000000
- 56898 multiletter control sequences out of 15000+600000
- 568681 words of font info for 74 fonts, out of 8000000 for 9000
+ 34570 strings out of 475171
+ 707788 string characters out of 5767095
+ 1133927 words of memory out of 5000000
+ 56973 multiletter control sequences out of 15000+600000
+ 569028 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,16n,117p,473b,1081s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (6 pages, 187475 bytes).
+ 98i,16n,117p,644b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (11 pages, 318131 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

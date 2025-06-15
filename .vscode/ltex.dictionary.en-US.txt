@@ -2,3 +2,4 @@ LNAs
 suspectance
 microstrip
 LTSpice
+transconductance
