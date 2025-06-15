@@ -1,0 +1,72 @@
+\section{Fine Tuning the LNA Design}
+
+In the previous section were obtained the theoretical values for the LNA design, that are shown in Table \ref{tab:teo-vals-cg} and \ref{tab:teo-vals-cs}. In this section, we will fine-tune the design to ensure that it meets the specifications. The fine-tuning process involves adjusting component values and configurations to optimize performance.
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Tuned values for the CG stage}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X
+                                >{\centering\arraybackslash}X}
+        \toprule
+        Tech & $L_{min}$ & $I_D$ (mA) & W & L & $g_m$ (mS) & R ($\si{\ohm}$) & $V_{bias}$ (mV)  \\
+        \midrule
+
+        \multirow{1}{*}{350nm}
+        & \multirow{1}{*}{$L$}  & 1:1 & xxx & xxx  & xxx & xxx & xxx  \\
+
+        \midrule
+        \multirow{1}{*}{65nm}
+        & \multirow{1}{*}{$L$}  & 1:1 & xxx  & xxx & xxx & xxx  & xxx \\
+        
+        \midrule
+        \multirow{1}{*}{45nm}
+        & \multirow{1}{*}{3$L$} & 1:1 & xxx  & xxx & xxx & xxx & xxx \\
+
+
+        \bottomrule
+    \end{tabularx}
+    \label{tab:teo-vals-cg}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Tuned values for the CS stage}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X
+                                >{\centering\arraybackslash}X}
+        \toprule
+        Tech & $L_{min}$ & $I_D$ (mA) & W & L & $g_m$ (mS) & R ($\si{\ohm}$) & $V_{bias}$ (mV)  \\
+        \midrule
+
+        \multirow{2}{*}{350nm}
+        & \multirow{2}{*}{$L$}  & 1:1 & xxx & xxx  & xxx & xxx & xxx  \\
+        &   & 1:n & xxx & xxx  & xxx & xxx & xxx  \\
+
+        \midrule
+        \multirow{2}{*}{65nm}
+        & \multirow{2}{*}{$L$}  & 1:1 & xxx  & xxx & xxx & xxx  & xxx \\
+        &   & 1:n & xxx & xxx  & xxx & xxx & xxx  \\
+        
+        \midrule
+        \multirow{2}{*}{45nm}
+        & \multirow{2}{*}{3$L$} & 1:1 & xxx  & xxx & xxx & xxx & xxx \\
+        &   & 1:n & xxx & xxx  & xxx & xxx & xxx  \\
+
+
+        \bottomrule
+    \end{tabularx}
+    \label{tab:teo-vals-cs}
+\end{table}
