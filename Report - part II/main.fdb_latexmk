@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1749971168.23097 "main.aux" "main.bbl" "main" 1749971170.17818 0
+["bibtex main"] 1749975972.05537 "main.aux" "main.bbl" "main" 1749976062.06664 0
   "./references.bib" 1749964848.39637 2691 4e1c955032cdf3931c8886c17fc90815 ""
   "/usr/share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1742685315 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1749971169.9631 3931 f3a9da9caa45c707a6879c8273a2bc93 "pdflatex"
+  "main.aux" 1749976061.83235 6896 c3d66ff2c20e7e1f112a4c152ac95635 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749971168.30219 "/home/sofia/Documents/uni/ERF-Lab2/Report - part II/main.tex" "main.pdf" "main" 1749971170.17836 0
+["pdflatex"] 1749976057.85469 "/home/sofia/Documents/uni/ERF-Lab2/Report - part II/main.tex" "main.pdf" "main" 1749976062.06682 0
   "/home/sofia/Documents/uni/ERF-Lab2/Report - part II/main.tex" 1749970548.42863 6971 f378ec61beb25ecd59269629c3dac3a7 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
@@ -36,6 +36,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1742685315 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1742685315 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1742685315 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1742685315 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1742685315 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1742685315 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1742685315 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -220,6 +221,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1747345802 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1747345760 2008237 ce3832b4ed9861c2a3ede69fe218f1f9 ""
+  "Images/65nm1To1Circ.png" 1749925807.07691 165254 28b7dfcaf4a0085aecb13a21dbf65de7 ""
+  "Images/65nm1To35Circ.png" 1749925807.07691 208034 1e617ba3ddd7b365b11197db3ab4c198 ""
+  "Images/65nm1To35Final.png" 1749925807.07691 312616 893ef950f8fb89b6421bb33a2f3587d8 ""
+  "Images/65nm1to1.png" 1749925807.08025 300377 94340ec40854ea3e5b0633c7aef7c5f2 ""
   "Images/NovaFctHor.png" 1749734818.31884 32716 6e7ce0b877b92393ca84ba89c4963727 ""
   "Images/NovaFctVer.png" 1749734818.31884 106706 6d7449553eef5410c3ab052e54552360 ""
   "Images/schem-Buffer.png" 1749968008.55468 31193 a1c94ee445a071e1e70b86dede412a7a ""
@@ -229,16 +234,16 @@
   "Images/schem-LNA.png" 1749970841.61201 22734 ed0098114469334f6af7f705bab95614 ""
   "Sections/Architecture.tex" 1749971162.86671 6613 c470a46d828fc82a7c458a5df110712c ""
   "Sections/Conclusion.tex" 1749734975.29597 22 d7b6d94cf8c9dfe4c4467258928348ee ""
-  "Sections/Design.tex" 1749971064.2438 224 6287ea1031ad464583c04d239375f79f ""
+  "Sections/Design.tex" 1749972535.25871 338 61217d8573867411c6fff04b1e07ae1a ""
   "Sections/FinalCircuit.tex" 1749734930.6511 25 dd2233ee735aa321d9c8bc06201ab017 ""
-  "Sections/Introduction.tex" 1749965637.59295 2080 4cec0a9bb25a5fb0f6088ed32c92e088 ""
-  "Sections/Simulation.tex" 1749734915.58172 43 cb882aea0d1194ef4d64d864d5c778b8 ""
-  "main.aux" 1749971169.9631 3931 f3a9da9caa45c707a6879c8273a2bc93 "pdflatex"
-  "main.bbl" 1749971168.28983 1399 58913b6d927f4a6a1136ea34fb74ea38 "bibtex main"
-  "main.lof" 1749971169.9631 746 2fb8184dd8e3e38233ee0337f393bef3 "pdflatex"
-  "main.out" 1749971169.9631 1962 74e62768fd33da80d3335585422cf9df "pdflatex"
+  "Sections/Introduction.tex" 1749975043.90695 2409 500288a304bdb87463e34596a1530d21 ""
+  "Sections/Simulation.tex" 1749976057.50918 3278 66547306e50d262d8e13c64123396f3e ""
+  "main.aux" 1749976061.83235 6896 c3d66ff2c20e7e1f112a4c152ac95635 "pdflatex"
+  "main.bbl" 1749975972.12576 1399 58913b6d927f4a6a1136ea34fb74ea38 "bibtex main"
+  "main.lof" 1749976061.83235 1280 5daaa33d5b764daee2a61cefd6b41192 "pdflatex"
+  "main.out" 1749976061.83235 3675 1e11574eeb42fad54e9fe3a46fada560 "pdflatex"
   "main.tex" 1749970548.42863 6971 f378ec61beb25ecd59269629c3dac3a7 ""
-  "main.toc" 1749971169.9631 1085 5ce3419f5d1b9d0606bcb73d842df8d8 "pdflatex"
+  "main.toc" 1749976061.83235 1927 ac9c73e74daf5e9f39d680b6ef67326d "pdflatex"
   (generated)
   "main.aux"
   "main.lof"
