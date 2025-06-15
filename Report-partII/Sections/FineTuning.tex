@@ -1,6 +1,6 @@
 \section{Fine Tuning the LNA Design}
 
-In the previous section were obtained the theoretical values for the LNA design, that are shown in Table \ref{tab:teo-vals-cg} and \ref{tab:teo-vals-cs}. In this section, we will fine-tune the design to ensure that it meets the specifications. The fine-tuning process involves adjusting component values and configurations to optimize performance.
+In the previous section were obtained the theoretical values for the LNA design, that are shown in Table \ref{tab:initial-vals-cg} and \ref{tab:initial-vals-cs}. In this section, we will fine-tune the design to ensure that it meets the specifications. The fine-tuning process involves adjusting component values and configurations to optimize performance.
 
 \textcolor{red}{Mudar os xxx para os valores reais}
 
@@ -61,8 +61,8 @@ For the $\SI{350}{\nano\meter}$ case, the value of W, and consequently, the valu
             & 1:n & --- & --- & --- & --- & --- \\
         \midrule
         \multirow{2}{*}{\SI{45}{\nano\meter}}
-            & 1:1 & \SI{25}{\micro\meter}  & \SI{60}{\nano\meter}  & 260 & 200 & 250 \\
-            & 1:n & \SI{320}{\micro\meter} & \SI{135}{\nano\meter} & 591 & 200 & 340 \\
+            & 1:1 & \SI{25}{\micro\meter}  & \SI{60}{\nano\meter}  & 26.0 & 200 & 250 \\
+            & 1:n & \SI{320}{\micro\meter} & \SI{135}{\nano\meter} & 59.1 & 200 & 340 \\
         \bottomrule
     \end{tabularx}
     \label{tab:teo-vals-cs}
@@ -72,3 +72,5 @@ For the $\SI{350}{\nano\meter}$ case, the value of W, and consequently, the valu
 \textcolor{red}{Dizer o que se mudou e o efeito das mudanças}
 
 For the $\SI{350}{\nano\meter}$ case, in the $1:1$ factor, the value of W was increased to maintain the gain at a value near $\SI{10}{\decibel}$, increasing also the $g_m$ value, since this has lower than expected. The final Resistor value was greatly reduced because this changed drop the value of the Noise Figure, without having much influence in the final gain, and this small influence is also countered by increasing the value of the W mentioned before. In the $1:n$ factor, the value of W is lower than supposed, but this change is necessary to maintain the correct value of $n \cdot g_{mCG}$. The value of the Resistor is adjusted to maintain the correct gain value.
+
+For the \SI{45}{\nano\meter} the initial value for $L = 3\times L_{min}$, this made devices that had $W$ too large to have a functional LNA. The capacitance created by the input devices, generated poles way to early in the band, making impossible to meet specification, since the pole made the input impedance not constant and gain value would decrease below the specification. Therefore this was quickly recalculated for $L=L_{min}$, this also did not work at first since the using low values of $L$ make for hard design because of channel length modulation.

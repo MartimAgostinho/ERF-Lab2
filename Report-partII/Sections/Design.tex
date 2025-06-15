@@ -147,3 +147,68 @@ For the $M_3$ transistor, Figure \ref{fig:schem-buffer}, it was assumed that the
     V_{biasp} = \frac{V_{DD}}{2} + V_{GS},
 \]
 with $V_{GS}$ equal to the transistor $M_4$. This guarantees symmetrical swing and proper headroom for the output stage.
+
+\subsection{Initial Values}
+
+Using the python script developed with the these equations, Appendix \ref{appendix:python_script}, the initial values were calculated, Tables \ref{tab:Initial-vals-cg} and \ref{tab:initial-vals-cs}. 
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Initial Values for the CG stage}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X 
+                                >{\centering\arraybackslash}X
+                                >{\centering\arraybackslash}X}
+        \toprule
+        Node & $g_m$ ratio & W & L & $g_m$ (mS) & R ($\si{\ohm}$) & $V_{bias}$ (mV)  \\
+        \midrule
+
+        \multirow{1}{*}{350nm}
+        &  1:1 & $\SI{291}{\micro\meter}$ & $\SI{350}{\nano\meter}$  & $15.9$ & $280$ & $1500$  \\
+
+        \midrule
+        \multirow{1}{*}{65nm}
+        & 1:1 & xxx  & xxx & xxx & xxx  & xxx \\
+        
+        \midrule
+        \multirow{1}{*}{45nm}
+        &  1:1 & \SI{642}{\micro\meter}  & \SI{135}{\nano\meter} & 17.3 & 286 & 352 \\
+
+
+        \bottomrule
+    \end{tabularx}
+    \label{tab:Initial-vals-cg}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Initial values for the CS stage}
+    \begin{tabularx}{\textwidth}
+        {@{}%  ⟵ trim left padding
+         >{\centering\arraybackslash}X
+         *{6}{>{\centering\arraybackslash}X}@{}} % ⟵ trim right padding
+        \toprule
+        Node & Config & W (\si{\micro\meter}) & L (\si{\nano\meter})
+             & $g_m$ (mS) & R (\si{\ohm}) & $V_\text{bias}$ (mV) \\
+        \midrule
+        \multirow{2}{*}{\SI{350}{\nano\meter}}
+            & 1:1 & \SI{291}{\micro\meter} & \SI{350}{\nano\meter} & 17.0 & 334 & 670 \\
+            & 1:n & \SI{875}{\micro\meter} & \SI{350}{\nano\meter} & 51.8 &  103 & 700 \\
+        \midrule
+        \multirow{2}{*}{\SI{65}{\nano\meter}}
+            & 1:1 & --- & --- & --- & --- & --- \\
+            & 1:n & --- & --- & --- & --- & --- \\
+        \midrule
+        \multirow{2}{*}{\SI{45}{\nano\meter}}
+            & 1:1 & \SI{450}{\micro\meter}  & \SI{135}{\nano\meter}  & 17.8 & 760 & 385 \\
+            & 1:n & \SI{1350}{\micro\meter} & \SI{135}{\nano\meter} & 59.5 & 125 & 455 \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:initial-vals-cs}
+\end{table}
+
