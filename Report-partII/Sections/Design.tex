@@ -2,23 +2,15 @@
 
 In this section, we present the design of the LNA architecture shown in Figure \ref{fig:schem-lna}. The design process involves biasing conditions and ensuring the desired specifications are met.
 
-\textcolor{red}{Dizer objetivos zin = 50, largura de banda ganho e noise E xplicar a cenas das capacitancias}
+The LNA architecture combines a common-gate (CG) stage in parallel with a common-source (CS) stage at the input. In this configuration, the overall input impedance is the parallel combination of the CS and CG input impedances: $Z_\text{in} = Z_\text{CS} // Z_\text{CG}$. Ideally, the common-source path presents an effectively infinite input impedance, so $Z_\text{CS} \approx +\infty$. As a result, the input impedance is dominated by the common-gate device, which can be designed to be around \SI{50}{\ohm}.
+
 \label{sec:inpCap}
-Input Capacitances will be a problem especially for the smaller nodes, where the band is higher frequencies. 
-\textcolor{red}{Explicar "workflow" valores teoricos com o script -> .op -> e ajustar para o resto dos valores}
+However, at high frequencies, the parasitic input capacitances of the transistors become significant. In practice, the “infinite” input impedance of the CS path is shunted by the devices' capacitances. Although smaller nodes have smaller input capacitances, this effect is exacerbated, because they are intended to work in higher frequencies.
 
-\textcolor{red}{Dizer que inicialmente gds << gm e gmbb = 0.2 gm, e para gds depois do primeiro valor o valor de gds ]e atualizado e valores sao retirados outra vez, e de resto os valores sao usados para fine tuning. Explicar o valor de vdssat e zonas de funcionameto do transistor}
+The design process followed a workflow that began with theoretical calculations using standard MOSFET equations to estimate $g_m$, $I_D$, and transistor dimensions. These initial values were generated via a Python script. The preliminary design was then simulated using LTSpice, where an operating point (\texttt{.op}) analysis provided accurate values for parameters like $g_{ds}$ and $g_{mb}$. Given that $r_{ds}$ is difficult to estimate analytically, it was refined post-simulation, and the design was recalculated using the updated values. Final adjustments were made through iterative fine-tuning according to the device equations, ensuring that the LNA met the specified gain and impedance requirements.
 
-It is important to note that the value of $r_{ds}$ is hard to calculate, and therefore a first biasing circuit is simulated and the circuit is recalculated with the new value of rds.
-
-Vdsat inicial
-$V_{DSsat} = \SI{100}{\milli\volt}$
-
-\begin{equation}
-    g_{mb}\approx 0.2\cdot g_m
-    \label{eq:gmb_approx}
-\end{equation}
-$g_{ds}\propto \frac{L}{I_D}$\cite{AnalogCircDesign}
+\label{sec:assumptions}
+In the initial design phase, it was assumed that $g_{ds} \ll g_m$ and that the body-effect transconductance could be approximated as $g_{mb} \approx 0.2\,g_m$. A fixed overdrive voltage of $V_{DSsat} = \SI{100}{\milli\volt}$ was used to ensure that all transistors operated in the correct zone. Device sizing and biasing were based on standard saturation-region MOSFET Equations \ref{eq:gm_eq}, \ref{eq:ID_eq} and $g_{ds} \propto \frac{L}{I_D}$\cite{AnalogCircDesign}. These expressions guided the theoretical design and were iteratively validated and adjusted during simulation.
 
 \begin{equation}
     g_m =\sqrt{2K_{n,p}\frac{W}{L}I_D}= \frac{2I_D}{V_{DSsat}}
@@ -32,22 +24,22 @@ $g_{ds}\propto \frac{L}{I_D}$\cite{AnalogCircDesign}
     \label{eq:ID_eq}
 \end{equation}
 
-\textcolor{red}{Falta falar do ganho}
-
-
 \subsection{Common Gate Stage Design}
 
+The schematic presented in Figure \ref{fig:CG_SmallSignal} corresponds to the small signal model of the common-gate stage. From it, the relevant expressions for the design of this stage were derived. 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Images/CG_SmallSignal.png}
     \caption{Common Gate Small Signal Schematic.}
     \label{fig:CG_SmallSignal}
 \end{figure}
 
+In order to meet, the specifications, Table \ref{tab:specifications}, the necessary Equations are Gain and Input impedance, Equations \ref{eq:CG_Gain} and \ref{eq:CG_Zin}, respectively.
+
 \begin{equation}
     A_v = \frac{v_o}{v_i}=\frac{g_m+g_{mb}+g_{ds}}{g_{ds}+1/r_1}
-    \label{eq:CSGain}
+    \label{eq:CG_Gain}
 \end{equation}
 
 \begin{equation}
@@ -57,16 +49,18 @@ $g_{ds}\propto \frac{L}{I_D}$\cite{AnalogCircDesign}
 
 \subsubsection{Circuit sizing}
 
-Using approximation presented in Equation \ref{eq:gmb_approx}, in order to meet the $Z_{in}$ specification $g_m \approx \SI{16.7}{\milli\siemens}$.
+Using the approximation presented in section \ref{sec:assumptions}, where $g_{mb} \approx 0.2\,g_m$, and Equation \ref{eq:CG_Zin} for input impedance, it is possible to determine the required $g_m$ to meet the input matching specification. For $Z_{in} = \SI{50}{\ohm}$, this gives $g_m \approx \SI{16.667}{\milli\siemens}$.
 
-Knowing this, from Equation \ref{eq:gm_eq} and with the inicial value of $V_{DSsat}$, $I_D$ is calculated.
+With this $g_m$ and the initial value of $V_{DSsat} = \SI{100}{\milli\volt}$, the drain current $I_D$ can be calculated using Equation \ref{eq:gm_eq}.
 
-Then it is possible to get the value of $W/L$, using Equation \ref{eq:gm_eq}.
+Once $I_D$ is known, the value of the transistor aspect ratio $W/L$ can be obtained using Equation \ref{eq:ID_eq}.
 
-Finally to meet the Gain specification, analyzing Equation \ref{eq:CSGain}, it will only depend on the $r_1$ value. 
+To meet the gain specification, Equation \ref{eq:CSGain} shows that the voltage gain depends on the value of $r_1$, since $g_m$ and $g_{mb}$ are already fixed from the input matching requirement. Therefore, $r_1$ is chosen to achieve the desired gain.
 
-In this stage, $I_D$ is forced by a current source, therefore, $V_{DSsat}$ will be fixed, hence, $V_{bias}$ needs only to be high enough so that $V_{s }> 0$ but not so high that $V_s > V_d$, $V_d = V_{dd} - r_1\cdot I_D$. 
+As $I_D$ is imposed by a current source, the value of $V_{DSsat}$ is maintained fixed. Thus, the bias voltage $V_{bias}$ must be set such that $V_s > 0$, to ensure proper transistor operation, but also such that $V_s < V_d$.
 
+This sets a constraint on $V_{bias}$, which must guarantee the correct operation region for the common-gate transistor.
+ 
 \subsection{Common Source Stage Design}
 
 
@@ -77,47 +71,79 @@ In this stage, $I_D$ is forced by a current source, therefore, $V_{DSsat}$ will 
     \label{fig:CS_SmallSignal}
 \end{figure}
 
-\begin{equation}
-    A_v = -gm(rds//R_L)
-    \label{eq:CS_Gain}
-\end{equation}
+Figure \ref{fig:CS_SmallSignal} shows the small signal equivalent circuit for the common-source stage. From this schematic, the expression for voltage gain can be determined, Equation \ref{eq:CS_Gain}. As already explained in section \ref{sec:assumptions} the common-source input impedance is not relevant.
 
 \begin{equation}
-    Z_{in} \approx +\infty
-    \label{eq:CS_Zin}
+    A_v = -g_m \left( r_{ds} // R_L \right)
+    \label{eq:CS_Gain}
 \end{equation}
 
 \subsubsection{Circuit Sizing}
 
-For the Common Source $Z_{in}$ is not important, although the input capacitances will have a great effect on the circuit performance has explained in section \ref{sec:inpCap}. 
+For the common-source stage, the input impedance is not a design concern, although the input capacitances will have a significant effect on circuit performance, as discussed in Section \ref{sec:inpCap}.
 
-There are already fixed parameters, $V_{DSsat}$, in order to garante the device is in the active zone, and $g_{m}$ will have two distinct values at first it will be the same as the Common-Gate, and at a second phase it will 3 times larger. 
+Certain parameters are fixed, such as $V_{DSsat}$, to ensure that the device operates in the saturation region. The transconductance $g_m$ will take on two values during the design process: initially, it will match the value used in the common-gate stage, and in a second phase, it will be set to three times that value.
 
-With the fixed values , using Equation \ref{eq:gm_eq}, $W/L$ is obtained, Equation \ref{eq:wl2}. 
+With these fixed values, $W/L$ can be obtained using Equation \ref{eq:gm_eq} and rewritten as Equation \ref{eq:wl2}.
 
 \begin{equation}
     \begin{split}
-        g_{m_1} &= n\cdot g_{m_2} = K_{n}\frac{W}{L}V_{DSsat}\text{\cite{AnalogCircDesign}} \Leftrightarrow \\
-       \Leftrightarrow \frac{W}{L} &= \frac{g_{m2}}{K_n \cdot V_{DSsat}^2}
+        g_{m_1} &= n\cdot g_{m_2} = K_{n}\frac{W}{L}V_{DSsat} \text{\cite{AnalogCircDesign}} \Leftrightarrow \\
+        \Leftrightarrow \frac{W}{L} &= \frac{g_{m2}}{K_n \cdot V_{DSsat}^2}
     \end{split}
     \label{eq:wl2}
 \end{equation}
 
-The value of $r_2$ can be also calculated as a function the gain goal, Equation \ref{eq:r2}. 
+The resistor $r_2$ is sized based on the desired voltage gain using Equation \ref{eq:r2}.
 
 \begin{equation}
-    \begin{split}
-        r_{2} = - \frac{A_{v} r_{ds}}{A_{v} - g_{m} r_{ds}}
-    \end{split}
+    r_2 = - \frac{A_v \cdot r_{ds}}{A_v - g_m \cdot r_{ds}}
     \label{eq:r2}
 \end{equation}
 
+In this stage, the calculation of $V_{bias}$ is straightforward, since $V_{GS} = V_{bias}$ and $V_{DSsat} = V_{GS} - V_{th}$. This leads to the Equation \ref{eq:V_bias_CS}.
 
-\subsubsection{$V_{bias}$ Sizing}
+\begin{equation}
+    V_{bias} = V_{GS} = V_{DSsat} + V_{th}
+    \label{eq:V_bias_CS}
+\end{equation}
 
-
-In this stage $V_{bias}$ is a straight forward calculating, since $V_{gs} = V_{bias}$.
-
-\subsubsection{n Factor effect on $g_m$}
 
 \subsection{Buffer Stage Design}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/BufferSmallSignal.png}
+    \caption{Buffer Small Signal Schematic.}
+    \label{fig:Buff_SmallSignal}
+\end{figure}
+
+Figure \ref{fig:Buff_SmallSignal} shows the small signal schematic for the Voltage-combiner buffer stage. This block is responsible for providing low output impedance, making the output single-ended and isolating the LNA core from the load, ensuring that the previous stages are not affected by the external circuitry.
+
+The gain of the buffer is given by Equation \ref{eq:buff_Gain}.
+\begin{equation}
+    A_v =  \frac{g_{m2}+ g_{m1}}{g_{ds1}+g_{ds2}+g_{mb1}+g_{m1}} \approx 1 + \frac{g_{m2} }{g_{m1}}
+    \label{eq:buff_Gain}
+\end{equation}
+
+Where the approximation holds assuming that $g_{m1}$ is much larger than $g_{ds}$ and $g_{mb1}$.
+
+The output impedance is approximated by Equation \ref{eq:buff_zout}.
+\begin{equation}
+    Z_{out} = \left(\frac{1}{g_{m1}}\right) // r_{ds_2} \approx \frac{1}{g_{m1}}
+    \label{eq:buff_zout}
+\end{equation}
+
+Maintaining the assumption that $g_{m1} \gg g_{ds}$, to ensure the specification is met, Table \ref{tab:specifications}, it is necessary that $g_{m1} \approx \SI{20}{\milli\siemens}$
+
+From the Equation \ref{eq:buff_Gain}, it is clear that for the buffer to operate close to unity gain and present the desired output impedance, the transistors should have similar characteristics, and $g_{m1} \approx g_{m2}$. 
+
+The biasing voltages were calculated based on the target DC operating point of the buffer. For the transistor $M_4$, Figure \ref{fig:schem-buffer}, the gate voltage was defined as:
+\[
+    V_{biasn} = V_{GS} = V_{tn} + V_{DSsat},
+\]
+For the $M_3$ transistor, Figure \ref{fig:schem-buffer}, it was assumed that the DC output voltage should be centered at $V_{DD}/2$, so the gate voltage was chosen as:
+\[
+    V_{biasp} = \frac{V_{DD}}{2} + V_{GS},
+\]
+with $V_{GS}$ equal to the transistor $M_4$. This guarantees symmetrical swing and proper headroom for the output stage.
