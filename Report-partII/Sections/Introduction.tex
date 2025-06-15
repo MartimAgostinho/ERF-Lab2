@@ -1,0 +1,46 @@
+\section{Introduction}
+
+\subsection{Objectives}
+
+The main goal of this project is to analyze and design a Low Noise Amplifier (LNA) using 350 nm CMOS technology, with a comparison using more advanced technologies such as 45 nm and 65 nm. The LNA must comply with key performance specifications, including a gain greater than 10 dB, a noise figure (NF) below 3 dB, and proper input/output impedance matching (S11 and S22 less than -10 dB).
+
+In table \ref{tab:specifications}, the specifications for the LNA are summarized. The design will be validated through circuit simulations using LTSpice, and the results will be compared with theoretical expectations.
+
+\begin{table}[h]
+    \centering
+    \caption{LNA Specifications}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X }
+        \toprule
+        \textbf{Specification} & \textbf{Value}\\
+        \midrule
+        Gain (S21) & $> 10$ dB \\
+        \midrule
+        Noise Figure (NF) & $< 3$ dB \\
+        \midrule
+        Input Impedance (S11) & $< -10$ dB \\
+        \midrule
+        Output Impedance (S22) & $< -10$ dB \\
+        \midrule
+        Technology Node & 350 nm, 65 nm, 45 nm \\
+        \midrule
+        Frequency (350 nm) & 0.1 \si{\giga \hertz} to 2 \si{\giga \hertz} \\
+        \midrule
+        Frequency (65 nm) & 5 \si{\giga \hertz} \\
+        \midrule
+        Frequency (45 nm) & 10 \si{\giga \hertz} \\
+        \midrule
+        VDD (350nm, 65nm, 45 nm) & 2.5\si{\volt}, 1.2\si{\volt}, 1\si{\volt} \\
+        \midrule
+        K constant (350nm, 65nm, 45 nm) & 200$\mu$, 244.961$\mu$, 50$\mu$ \\
+        \midrule
+        $L_{min}$ (350nm, 65nm, 45 nm) & 350\si{\nano \meter}, 65\si{\nano \meter}, 45\si{\nano \meter} \\
+        \midrule
+        n ($g_m$ ratio) & 3 \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:specifications}
+\end{table}
+
+\subsection{Motivation}
+
+Modern telecommunication systems operate at high frequencies and data rates, and the LNA plays a critical role in the receiver chain, as it amplifies weak incoming signals while minimizing noise. A well-designed LNA ensures signal integrity, energy efficiency, and compliance with communication standards. This project gives students the opportunity to apply theoretical knowledge of analog and RF electronics by developing and validating a practical CMOS-based LNA using circuit simulation tools such as LTSpice.

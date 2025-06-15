@@ -8,3 +8,6 @@ Ltspice/*.raw
 LTspice2.0/*.net
 LTspice2.0/*.log
 LTspice2.0/*.raw
+
+Report-partII/main.*
+!Report-partII/main.tex

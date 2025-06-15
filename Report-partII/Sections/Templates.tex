@@ -1,0 +1,106 @@
+\section{Template}
+
+\begin{table}[h]
+    \centering
+    \caption{Comparison of Key Parameters for MCP6001, TL084, and LM324}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Characteristic} & \textbf{MCP6001} & \textbf{TL084} & \textbf{LM324} \\
+        \midrule
+        Max Output (V) & $(V+)-25mV$ & $(V+)$ & $(V+) - 1.5V$ \\
+        \midrule
+        Min Output (V) & $(V-)+25mV$ & $(V-) + 1.5V$ & $(V-) + 150mV$ \\
+        \midrule
+        Supply Range (V) & $1.8V$ to $6.0V$ & $4.5V$ to $40V$ & $3V$ to $36V$ \\
+        \midrule
+        Offset (mV) & $\pm 4.5mV$ & $1mV$ & $\pm 3 mV$ \\
+        \midrule
+        Max Output (mA) & $\pm 23 mA$ $(5.5V)$ & $10 mA$ & $\pm 30 mA$ \\
+        \midrule
+        Idle Consumption & $100 \mu A $ & $1.4$ $mA$ & $240 \mu A$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:opamp}
+\end{table}
+%TODO FOTOS LADO A LADO
+\begin{figure}[H]
+    \centering
+    \includegraphics*[scale = 0.05]{Images/NovaFctHor.png}
+    \caption{Logo da Nova FCT}
+    \label{wrap-fig:1}
+\end{figure}
+
+%Equation System
+\begin{equation}
+    \begin{cases}
+    
+        R( 283,15 ) = 1,998\cdot 10^4 ~\Omega \\
+        R( 298,15 ) = 10^4 ~\Omega\\
+        R( 313,15 ) = 0,5282 \cdot 10^4 ~\Omega\\
+    
+    \end{cases}
+    \Leftrightarrow
+    \begin{cases}
+        A = 1,3092 \cdot 10^{-3}\\
+        B = 2,1439 \cdot 10^{-4}\\
+        C = 9,6600 \cdot 10^{-8}\\
+    
+    \end{cases}
+\end{equation}
+
+\begin{lstlisting}[language=Matlab, caption=Matlab code example]
+    Fdz
+    printf('Polos: ');
+    PlFdz
+    %figure(3);
+    pzmap(Fdz);
+    %figure(4);
+    step(Fdz);
+\end{lstlisting}
+
+\begin{itemize}
+    \item item 1
+    
+    ...
+    \item item n 
+\end{itemize}
+
+\begin{enumerate}
+    \item Butterworth
+
+    \item Chebyshev
+    
+    \item Elliptic
+    
+    \item Bessel
+    
+    In the application in study, the group delay is a critical factor because the ECG signal is a time-domain signal, and the phase distortion can lead to a misinterpretation of the signal. So it is safe to say that the Bessel filter is the best choice for this application.
+\end{enumerate}
+
+\begin{figure}[H]   
+\begin{centering}
+    \begin{tikzpicture}[node distance=2cm]
+
+        % Blocks
+        \node (ntc) [block] {NTC Resistance};
+        \node (ohms) [block, right of=ntc, xshift=2.5cm] {Ohms to Voltage};
+        \node (mcu) [block, right of=ohms, xshift=1.5cm] {MCU};
+        \node (temp) [block, right of=mcu, xshift=1cm] {Temperature};
+    
+        % Arrows
+        \draw [arrow] (ntc) -- (ohms);
+        \draw [arrow] (ohms) -- (mcu);
+        \draw [arrow] (mcu) -- (temp);
+    
+    \end{tikzpicture}
+    
+    \caption{ NTC's block diagram }
+    \label{fig:NTCBlock}
+
+\end{centering}
+\end{figure}
+
+
+Referece like this\textsuperscript{\cite{ESP32-datasheet}}
+% Add citation commands where necessary
+% Example: \cite{reference_label}
