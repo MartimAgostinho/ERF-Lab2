@@ -1,2 +1,27 @@
 \section{Final Circuit}
 
+\subsection{Power Consumption Considerations}
+
+Although precise power measurements were not the primary objective of this analysis, qualitative trends can be inferred from the design and simulation results. As expected, older technology nodes such as $\SI{350}{\nano \meter}$ operate at higher supply voltages and bias currents, resulting in increased static power consumption. These circuits also use larger transistor dimensions, which further elevate dynamic power during signal transitions.
+
+In contrast, the $\SI{65}{\nano \meter}$ technology benefits from lower supply voltages and smaller device geometries, leading to lower power dissipation while maintaining performance. 
+
+The $\SI{45}{\nano \meter}$ node, while having the lowest intrinsic power requirements due to its advanced scaling, proved challenging to bias effectively and did not meet performance targets. Thus, any power savings are offset by degraded analog behavior and reduced yield.
+
+\subsection{Bandwidth and Frequency Range}
+
+Each technology node inherently supports a different operational bandwidth, dictated by parasitic capacitances, device speed, and gain-bandwidth trade-offs. The $\SI{350}{\nano \meter}$ circuits were simulated around \SI{1}{\giga\hertz}, with stable gain and impedance, confirming that this node is well suited for sub-GHz applications such as ISM or low-frequency RF.
+
+For $\SI{65}{\nano \meter}$, simulations were extended to \SI{5}{\giga\hertz}, where performance remained robust. The lower parasitics and higher transit frequencies ($f_T$) allow the circuit to maintain consistent gain and input matching over a wider frequency span. This makes the node particularly attractive for modern wireless standards such as Wi-Fi, LTE, or 5G sub-6~GHz bands.
+
+In contrast, the $\SI{45}{\nano \meter}$ implementation exhibited bandwidth limitations due to poorly controlled parasitics and early pole formation. Although the technology theoretically supports high-frequency operation, the analog design constraints at this scale impaired consistent performance, particularly in input impedance flatness and NF stability across frequency.
+
+\subsection{Final Implementation and Justification}
+
+Following the comprehensive simulation analysis and performance evaluation across multiple technology nodes and transconductance ratios, the final LNA implementation adopts the $\SI{65}{\nano \meter}$ CMOS technology with a $1{:}3$ $g_m$ ratio configuration. This choice is justified by its superior balance between all critical design parameters: gain, noise figure, and impedance matching.
+
+The selected configuration achieved a gain of 10.86~dB and a noise figure of 2.49~dB, while maintaining input and output impedances close to the target value of \SI{50}{\ohm}. These results indicate full compliance with the LNA design specifications.
+
+Moreover, the $\SI{65}{\nano \meter}$ node offers significant advantages in terms of integration density, reduced parasitic capacitance, and lower power supply requirements, which are essential for modern RF systems. Its compatibility with advanced digital circuitry also enables seamless integration in system-on-chip (SoC) solutions, facilitating compact and power-efficient designs.
+
+
