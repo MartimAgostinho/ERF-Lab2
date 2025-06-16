@@ -1,8 +1,9 @@
 \section{Fine Tuning the LNA Design}
 
-In the previous section were obtained the theoretical values for the LNA design, that are shown in Table \ref{tab:initial-vals-cg} and \ref{tab:initial-vals-cs}. In this section, we will fine-tune the design to ensure that it meets the specifications. The fine-tuning process involves adjusting component values and configurations to optimize performance.
+In the previous section, theoretical values for the LNA design were obtained and presented in Tables~\ref{tab:initial-vals-cg} and~\ref{tab:initial-vals-cs}. In this section, the design is fine-tuned to meet the required specifications for gain, noise figure (NF), and impedance matching. The tuning process involved adjusting $W$, $L$, and $R$ across the three target technologies.
 
-\textcolor{red}{Mudar os xxx para os valores reais}
+In the \SI{45}{\nano\meter} case, the initial design used $L = 3L_{\min}$ to improve channel control. However, this resulted in excessive input capacitance, pushing input poles into the signal band and degrading both impedance matching and gain. Reducing $L$ to $L_{\min}$ mitigated this problem but increased the impact of channel-length modulation, requiring a trade-off to preserve performance.
+
 
 \begin{table}[H]
     \centering
@@ -36,9 +37,11 @@ In the previous section were obtained the theoretical values for the LNA design,
     \label{tab:teo-vals-cg}
 \end{table}
 
-\textcolor{red}{Dizer o que se mudou e o efeito das mudanças}
+For the \SI{350}{\nano\meter} node, $W$ was adjusted to refine the transconductance $g_m$ and match the required input impedance. The resistor $R$ was fine-tuned to reduce the Noise Figure without significantly impacting the gain.
 
-For the $\SI{350}{\nano\meter}$ case, the value of W, and consequently, the value of $g_m$ were changed to guarantee the correct input impedance value. The value of the resistor was also modified to minimize the Noise Figure of the LNA for this configuration.
+In the \SI{65}{\nano\meter} case, $W$ was similarly tuned to satisfy impedance matching. The resistance was increased slightly to enhance gain while maintaining the NF below the allowable limit.
+
+In the \SI{45}{\nano\meter} case, tuning involved reducing both $W$ and $L$ to minimize input capacitance and prevent premature pole formation in the frequency band of interest. While smaller $L$ increases channel-length modulation, the configuration was optimized to balance gain, impedance, and NF. The final $g_m$ value was chosen to recover the desired gain without compromising input matching.
 
 \begin{table}[H]
     \centering
@@ -68,9 +71,8 @@ For the $\SI{350}{\nano\meter}$ case, the value of W, and consequently, the valu
     \label{tab:teo-vals-cs}
 \end{table}
 
+In the \SI{350}{\nano\meter} case, the $1{:}1$ configuration required an increase in $W$ to recover the target gain (near \SI{10}{\decibel}) due to initially low $g_m$. The load resistor was significantly reduced, which improved the NF with minimal gain impact. For the $1{:}n$ configuration, $W$ was optimized to maintain the scaling relation $n \cdot g_{mCG}$ while tuning $R$ for proper gain.
 
-\textcolor{red}{Dizer o que se mudou e o efeito das mudanças}
+In the \SI{65}{\nano\meter} case, $W$ was adjusted to restore impedance matching and reduce NF. Lack of $1{:}n$ data suggests either infeasibility or omission in simulation.
 
-For the $\SI{350}{\nano\meter}$ case, in the $1:1$ factor, the value of W was increased to maintain the gain at a value near $\SI{10}{\decibel}$, increasing also the $g_m$ value, since this has lower than expected. The final Resistor value was greatly reduced because this changed drop the value of the Noise Figure, without having much influence in the final gain, and this small influence is also countered by increasing the value of the W mentioned before. In the $1:n$ factor, the value of W is lower than supposed, but this change is necessary to maintain the correct value of $n \cdot g_{mCG}$. The value of the Resistor is adjusted to maintain the correct gain value.
-
-For the \SI{45}{\nano\meter} the initial value for $L = 3\times L_{min}$, this made devices that had $W$ too large to have a functional LNA. The capacitance created by the input devices, generated poles way to early in the band, making impossible to meet specification, since the pole made the input impedance not constant and gain value would decrease below the specification. Therefore this was quickly recalculated for $L=L_{min}$, this also did not work at first since the using low values of $L$ make for hard design because of channel length modulation.
+In the \SI{45}{\nano\meter} case, initial attempts using $L = 3L_{\min}$ caused excessive capacitance, generating poles within the band of interest and degrading impedance flatness and gain. Switching to $L = L_{\min}$ mitigated this, but brought channel-length modulation effects. Final tuning of $W$, $L$, $g_m$, and $R$ ensured gain recovery and noise optimization.

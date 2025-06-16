@@ -1,2 +1,11 @@
 \section{Conclusion}
 
+This project presented the design and analysis of a CMOS Low Noise Amplifier using 350~nm, 65~nm, and 45~nm technologies. The proposed LNA architecture combines common-gate and common-source stages to achieve input matching, gain, and differential output with enhanced noise and distortion cancellation.
+
+In simulations, the 350~nm implementation met all specifications for both 1:1 and 1:3 $g_m$ ratios, demonstrating effective input matching and noise performance. The 65~nm implementation exhibited improved gain and reduced noise figure, albeit with more challenging impedance control due to higher parasitics. The 45~nm design faced significant obstacles: the initial sizing produced excessive input capacitance, introducing low-frequency poles that degraded impedance matching and gain. Even after fine-tuning, the 45~nm LNA struggled to meet the gain and NF requirements due to the difficulties in managing parasitics and headroom constraints at this advanced node.
+
+The project successfully demonstrated the design and simulation of a CMOS LNA across multiple technology nodes, highlighting the trade-offs and challenges associated with scaling RF designs. The 350~nm design provided a solid foundation with predictable performance, while the 65~nm and 45~nm designs illustrated the increasing complexity and constraints imposed by advanced technology nodes.
+
+The project highlighted the trade-offs involved in scaling RF designs across technology nodes. While advanced nodes theoretically offer benefits in terms of speed and integration, they also introduce significant challenges related to parasitics, headroom, and layout effects. The 350~nm design demonstrated a more straightforward implementation with predictable performance, while the 65~nm and 45~nm designs required adjustments to meet specifications.
+
+The project also emphasized the importance of simulation tools like LTSpice and Cadence in validating design choices and ensuring compliance with RF specifications. The results obtained from simulations provided valuable insights into the performance of the LNA across different nodes, allowing for a comprehensive understanding of the design process.

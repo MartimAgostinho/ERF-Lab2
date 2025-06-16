@@ -1,72 +1,67 @@
 \section{LNA Architecture}
 
-In this section, we present the architecture of the Low Noise Amplifier (LNA) designed, the complete architecture is shown in Figure \ref{fig:schem-lna}. 
+The proposed Low Noise Amplifier (LNA) architecture employs a wideband balun topology that combines a common-gate (CG) stage and a common-source (CS) stage operating in parallel. This design is advantageous due to its capability to provide input matching, output balancing, noise cancellation, and distortion suppression~\cite{Blaakmeer2008}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/schem-LNA.png}
-    \caption{Schematic of the gain stages in the proposed LNA architecture.}
+    \includegraphics[width=0.8\textwidth]{Images/schem-LNA.png}
+    \caption{Schematic of the proposed LNA topology.}
     \label{fig:schem-lna}
 \end{figure}
 
-\subsection{Common Gate and Common Source combination gain stages}
+As shown in Figure~\ref{fig:schem-lna}, the input signal is simultaneously amplified by the CG and CS stages. The CG stage is connected directly to the input, offering low input impedance suitable for broadband matching with a 50~\si{\ohm} source. The CS stage provides voltage amplification and operates in parallel to assist in achieving differential outputs.
 
-The Low Noise Amplifier (LNA) implemented in this project adopts a wideband balun-LNA topology, which combines a common-gate (CG) stage and a common-source (CS) stage operating in parallel, as depicted in Figure \ref{fig:schem-gain-stages}. This configuration, proposed in \cite{Blaakmeer2008}, is particularly advantageous because it simultaneously enables input matching, output balancing, noise cancellation, and distortion suppression.
+The circuit produces a differential output, the positive output is taken from the drain of the CG transistor, while the negative output is taken from the drain of the CS transistor. AC coupling capacitors are placed between stages to ensure proper DC isolation.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Images/schem-GainStages.png}
-    \caption{Schematic of the gain stages in the proposed LNA architecture.}
-    \label{fig:schem-gain-stages}
-\end{figure}
-
-Analyzing the circuit in Figure \ref{fig:schem-gain-stages}, the input signal is amplified by two separate stages, the common-gate stage, where transistor M1 is used, and the common-source stage, where transistor M2 is used. The output is differential, with the positive signal taken from the drain of M1 and the negative signal from the drain of M2. ~The capacitors are used to couple the AC signals while blocking DC, ensuring that the DC biasing of the transistors does not affect the AC performance. 
-
-\subsubsection{Common Gate Stage}
-
-The CG stage, depicted in Figure \ref{fig:schem-cg}, provides a single-ended input with low input impedance, which makes it ideal for broadband input matching—specifically to $\SI{50}{\ohm}$ source impedance.
-
-However, most receiver chains operate differentially, requiring a conversion from single-ended to differential signals. In this topology, the differential output is achieved by adding the CS stage in parallel with the CG stage, and balancing the gains of both paths with opposite polarities. This results in a balun behavior, allowing the circuit to simultaneously amplify and convert the input signal to differential form.
+\subsection{Common Gate Stage}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{Images/schem-CG.png}
-    \caption{Schematic of the common-gate stage in the proposed LNA architecture.}
+    \caption{Common-Gate (CG) stage of the LNA.}
     \label{fig:schem-cg}
 \end{figure}
 
-\subsubsection{Common Source Stage}
+The CG stage, illustrated in Figure~\ref{fig:schem-cg}, provides a low input impedance and enables direct broadband matching to a 50~\si{\ohm} source. This characteristic makes it ideal for RF front-end applications.
 
-The CS stage, shown in Figure \ref{fig:schem-cs}, provides a high input impedance and is typically used for voltage amplification. In this architecture, the CS stage is designed to operate in parallel with the CG stage, allowing for differential output while maintaining high gain. The CS stage also contributes to the overall noise figure and linearity of the LNA.
+To produce differential output and achieve noise cancellation, the CG stage is complemented by a CS stage of matching gain but opposite phase. This enables the structure to perform as a balun, converting the single-ended input into a differential signal.
+
+Noise from the CG stage, predominantly thermal, appears identically at both output nodes and is thus suppressed in the differential signal. Likewise, second-order distortion from the CG stage is canceled when the CS path has symmetric gain but opposite sign.
+
+\subsection{Common Source Stage}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{Images/schem-CS.png}
-    \caption{Schematic of the common-source stage in the proposed LNA architecture.}
+    \caption{Common-Source (CS) stage of the LNA.}
     \label{fig:schem-cs}
 \end{figure}
 
-The noise produced by the CG transistor, mainly thermal noise, is a major contributor to the total noise figure in traditional designs. However, by carefully matching the gain of the CG and CS paths, the noise from the CG stage appears as a common-mode signal at the differential output and is effectively canceled. This cancellation occurs because the CG noise contributes identically to both outputs, while the CS stage contributes with opposite polarity. The result is a significantly reduced noise figure.
+The CS stage, shown in Figure~\ref{fig:schem-cs}, offers high voltage gain and high input impedance. In this architecture, it is used in parallel with the CG stage, contributing to the differential signal and allowing cancellation of common-mode components.
 
-In addition to noise, the nonlinear distortion of the CG stage can also be canceled using this structure. When both paths have matched amplitude and phase but opposite sign, the nonlinear distortion generated by the CG stage also appears in-phase at both outputs and is canceled in the differential signal. As a result, the overall linearity is determined by the CS stage. The CS stage can then be optimized independently for linearity, allowing the design to achieve high dynamic range while maintaining wideband operation.
+The CS stage's primary contribution is not only signal gain but also linearity. As CG stage nonlinearities are canceled, the CS stage becomes the dominant source of linearity, enabling targeted optimization for dynamic range and signal integrity.
 
 \subsection{Buffer Stage}
 
-In the proposed LNA architecture, an output buffer with a voltage combiner configuration, depicted in Figure \ref{fig:schem-buffer}, is included following the differential outputs of the common-gate and common-source stages. The buffer plays a crucial role in ensuring impedance matching, signal integrity, and measurement convenience.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/schem-Buffer.png}
-    \caption{Schematic of the output buffer in the proposed LNA architecture.}
+    \includegraphics[width=0.6\textwidth]{Images/schem-Buffer.png}
+    \caption{Output buffer stage with voltage combining.}
     \label{fig:schem-buffer}
 \end{figure}
 
-Analyzing the circuit the differential signal enters through the gates of both transistors, M3 in a common-drain configuration and M4 in a common-source configuration. Ideally, both configurations have a gain of 1, resulting in a single-ended output signal with a gain equal to the gain of the input signals. As in the previous circuit, the capacitors are used to couple the AC signals while blocking DC, ensuring that the DC biasing of the transistors does not affect the AC performance.
+To convert the differential output into a single-ended signal and drive a 50~\si{\ohm} load, a buffer stage is added after the gain stages, in conformity with the one presented in \cite{Bastos2014}. The buffer, shown in Figure~\ref{fig:schem-buffer}, consists of transistors in both common-drain and common-source configurations, acting as a voltage combiner.
 
-Firstly, in typical RF systems, the LNA output often needs to interface with $50 \si{\ohm}$ measurement equipment or subsequent stages (e.g., mixers) that have specific impedance requirements. The output buffer, provides a low output impedance while maintaining a high input impedance, effectively isolating the LNA core from the load. This allows the LNA to drive a standard $50 \si{\ohm}$ load without compromising its gain or linearity performance.
+The buffer serves several purposes:
+\begin{itemize}
+    \item It provides low output impedance, ensuring proper matching with measurement instruments and subsequent RF stages.
+    \item It isolates the gain core from external loading, preserving voltage gain and improving stability.
+    \item It enables easy measurement by converting differential signals into single-ended outputs suitable for spectrum and network analyzers.
+    \item It centers the output DC level around $V_{DD}/2$, enabling maximum output swing and symmetrical headroom.
+\end{itemize}
 
-Secondly, the buffer helps to preserve the voltage gain achieved by the LNA. Without buffering, any mismatch or loading at the output could attenuate the signal and degrade performance. The buffer thus ensures that the full gain developed across the load devices is delivered to the output.
-
-Thirdly, for testing and characterization purposes, the buffer is particularly important. In the measurement setup described in \cite{Bastos2014}, the output buffer is integrated with a balun/voltage combiner to enable single-ended measurements of the differential output. This facilitates direct connection to spectrum analyzers or vector network analyzers without the need for additional external components.
-
-Finally, the inclusion of the buffer also contributes to robustness against variations in the following stage, whether in simulation or practical implementation, ensuring consistent performance across different configurations.
+The PMOS and NMOS gates are biased as follows:
+\[
+    V_{\text{biasn}} = V_{tn} + V_{\text{DSsat}}, \quad V_{\text{biasp}} = \frac{V_{DD}}{2} + V_{GS}
+\]
+where $V_{GS}$ corresponds to the gate-source voltage of the NMOS device. This ensures symmetrical operation and effective output swing.
