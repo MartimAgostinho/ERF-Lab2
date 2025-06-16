@@ -178,4 +178,97 @@ The circuit implemented in Cadence for the 65 nm technology with a 1:n $g_m$ rat
 
 \subsection{Simulation for 45 nm Technology}
 
+The simulations for this technology were done in LTSpice.
+\subsubsection{1:1 $g_m$ ratio}
+
+The results of the s parameters for the 45 nm technology with a 1:1 $g_m$ ratio are shown in Figure \ref{fig:SParam45nm1to1}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/SParam_45_1To1.png}
+    \caption{S parameters simulation for 45 nm Technology with 1:1 $g_m$ Ratio}
+    \label{fig:SParam45nm1to1}
+\end{figure}
+
+The results for the input and output impedances are shown in Figure \ref{fig:ZParam45nm1to1}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Imp_45_1To1.png}
+    \caption{Input and Output Impedances for 45 nm Technology with 1:1 $g_m$ Ratio}
+    \label{fig:ZParam45nm1to1}
+\end{figure}
+
+Lastly the simulation of the noise factor is shown in Figure \ref{fig:Noise45nm1to1}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Noise_45_1To1.png}
+    \caption{Noise Figure for 45 nm Technology with 1:1 $g_m$ Ratio}
+    \label{fig:Noise45nm1to1}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Simulation Results for 45 nm Technology with 1:1 $g_m$ Ratio}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X }
+        \toprule
+        \textbf{Parameter} & \textbf{Value}\\
+        \midrule
+        Gain (S21) & \SI{4.84}{\decibel} \\
+        \midrule
+        Noise Figure (NF) & \SI{3.76}{\decibel} \\
+        \midrule
+        Input Impedance (Z11) & \SI{1111}{\ohm} \\
+        \midrule
+        Output Impedance (Z22) & \SI{1111}{\ohm} \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:45nm_1to1_results}
+\end{table}
+\subsubsection{1:3 $g_m$ ratio}
+
+The results of the s parameters for the 45 nm technology with a 1:3 $g_m$ ratio are shown in Figure \ref{fig:SParam45nm1to3}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/SParam_45_1To3.png}
+    \caption{S parameters simulation for 45 nm Technology with 1:3 $g_m$ Ratio}
+    \label{fig:SParam45nm1to3}
+\end{figure}
+
+The results for the input and output impedances are shown in Figure \ref{fig:ZParam45nm1to3}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Imp_45_1To3.png}
+    \caption{Input and Output Impedances for 45 nm Technology with 1:3 $g_m$ Ratio}
+    \label{fig:ZParam45nm1to3}
+\end{figure}
+
+Lastly the simulation of the noise factor is shown in Figure \ref{fig:Noise45nm1to3}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Noise_45_1To3.png}
+    \caption{Noise Figure for 45 nm Technology with 1:3 $g_m$ Ratio}
+    \label{fig:Noise45nm1to3}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Simulation Results for 45 nm Technology with 1:3 $g_m$ Ratio}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X }
+        \toprule
+        \textbf{Parameter} & \textbf{Value}\\
+        \midrule
+        Gain (S21) & \SI{1.4}{\decibel} \\
+        \midrule
+        Noise Figure (NF) & \SI{111}{\decibel} \\
+        \midrule
+        Input Impedance (Z11) & \SI{111}{\ohm} \\
+        \midrule
+        Output Impedance (Z22) & \SI{111}{\ohm} \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:45nm_1ton_results}
+\end{table}
+
+
 \subsection{Results Analysis and Comparison}
